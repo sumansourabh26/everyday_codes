@@ -1,0 +1,35 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+class Jcb extends JFrame{
+	private JComboBox box;
+	private JLabel picture;
+	
+	private static String[] filename = {"image/1.png","image/2.png"};
+	private Icon[] pics = {new ImageIcon(getClass().getResource(filename[0])),new ImageIcon(getClass().getResource(filename[1]))};
+	
+	public Jcb(){
+		super("the title");
+		setLayout(new FlowLayout());
+		box = new JComboBox(filename);add(box);
+		box.addItemListener(
+				new ItemListener(){
+					public void itemStateChanged(ItemEvent event){
+						if(event.getStateChange() == ItemEvent.DESELECTED)
+							picture.setIcon(pics[box.getSelectedIndex()]);
+					}
+				}
+			);
+		picture = new JLabel("jnfjnds");
+		add(picture);
+	}
+}
+public class JCombo_box {
+	public static void main(String[] args){
+		Jcb screen = new Jcb();
+		screen.setSize(400,400);
+		screen.setVisible(true);
+		screen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}

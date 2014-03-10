@@ -1,0 +1,41 @@
+import javax.swing.*;
+import javax.swing.event.*;
+import java.awt.*;
+import java.awt.event.*;
+
+class jlist_gui extends JFrame{
+	private JList list;
+	private static String[] colorname = {"black","blue","red","gray"};
+	private static Color[] colors = {Color.BLACK,Color.BLUE,Color.RED,Color.GRAY};
+	
+	jlist_gui(){
+		super("title");
+		setLayout(new FlowLayout());
+		
+		list = new JList(colorname);
+		list.setVisibleRowCount(3);
+		list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		add(new JScrollPane(list));
+		list.addListSelectionListener(
+				new ListSelectionListener(){
+					public void valueChanged(ListSelectionEvent event){
+						getContentPane().setBackground(colors[list.getSelectedIndex()]);
+						//getGlassPane().setBackground(Color.BLUE);
+					}
+				}
+				);
+		
+		
+	}
+}
+
+public class jlist {
+	public static void main(String args[]) {
+		jlist_gui screen = new jlist_gui();
+		screen.setSize(400,400);
+		screen.setVisible(true);
+		screen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+	}
+}
+	

@@ -1,0 +1,50 @@
+/*just to try if radio button on my own and also that 
+ * what is the integer return value of is selected type of true/false */ 
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+class class31 extends JFrame{
+	private JRadioButton b1,b2,b3,b4;
+	private ButtonGroup g1 = new ButtonGroup();
+	
+	class31(){
+		super ("its heading");
+		setLayout(new FlowLayout());
+		
+		b1 = new JRadioButton("1");Icon i1 = new ImageIcon(getClass().getResource("image/1.png"));
+		b2 = new JRadioButton("2");Icon i2 = new ImageIcon(getClass().getResource("image/2.png"));
+		b3 = new JRadioButton("healthy");Icon i3 = new ImageIcon(getClass().getResource("image/small_girl.png"));
+		b4 = new JRadioButton("urejected");Icon i4 = new ImageIcon(getClass().getResource("image/urejected.png"));
+		add(b1);add(b2);add(b3);add(b4);
+		g1.add(b1);g1.add(b2);g1.add(b3);g1.add(b4);
+		b1.addActionListener(new handler(i1));
+		b2.addActionListener(new handler(i2));
+		b3.addActionListener(new handler(i3));
+		b4.addActionListener(new handler(i4));
+	}
+	
+	private class handler implements ActionListener{
+		Icon i;
+		handler(Icon i1){
+			i = i1;
+		}
+		public void actionPerformed(ActionEvent event){
+			System.out.println(b1.isSelected());
+			b2.setIcon(i);
+		}
+	}
+}
+		
+
+
+
+public class trial31 {
+	public static void main(String[] args) {
+		class31 screen = new class31();
+		screen.setSize(800,800);
+		screen.setVisible(true);
+		screen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+}

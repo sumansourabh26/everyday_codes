@@ -1,0 +1,26 @@
+/*just to try if radio button on my own and also that 
+ * what is the integer return value of is selected type of true/false */ 
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+class class31 extends JFrame{
+	JRadioButton[] b;
+	private Icon[] i = {new ImageIcon("image/fat"),new ImageIcon("image/dating"),new ImageIcon("image/healthy"),new ImageIcon("image/k"),};
+	
+	class31(){
+		b[1] = new JRadioButton();
+		b[2] = new JRadioButton()
+	}
+}
+
+
+public class trial31 {
+	public static void main(String[] args) {
+		class31 screen = new class31();
+		screen.setSize(800,800);
+		screen.setVisible(true);
+		screen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+}

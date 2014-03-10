@@ -1,0 +1,7 @@
+(define (equ a b c) 
+  (cond ( (= (modulo c (gcad a b)) 0) #t) 
+        ( else #f)))
+(define (gcad a b)
+  ( if (= 0 (modulo a b)) b ( gcad b (modulo a b))))
+(define (eq a b c) 
+  (if (> a b) (equ a b c ) (equ b a c)))

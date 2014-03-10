@@ -1,0 +1,19 @@
+<html>
+
+<head>
+<title>Methods of Object</title>
+
+<script type="text/javascript">
+	function people(name, age){
+		this.name = name;
+		this.age = age;
+	}
+	var natalie = new people("Natelie portman",28);
+</script>
+</head>
+
+<body>
+
+
+</body>
+</html>

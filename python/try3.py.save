@@ -1,0 +1,8 @@
+s = "suman"
+p = "kjshgjgh"
+
+suman = ('i am a dude. but u are not')
+print("capitalise", str.capitalize(suman))
+
+print("center", suman.center(3 , 'L'
+))

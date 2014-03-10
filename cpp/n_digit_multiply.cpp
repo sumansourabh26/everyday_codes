@@ -1,0 +1,23 @@
+#include<simplecpp>
+main_program{
+	long a[n],b[n],c[2n],i,j,r,t,;
+	cin>>i;
+	j=i;
+	for(i=0;i<=j;i++){
+		cin>>a[i];
+	}
+	i=j;
+	for(j=0;j<=0;j++){
+		cin>>b(j);
+	}
+	j=i;
+	for(r=0;r<2n+2;r++){
+		c[r]=0;
+		for(t=0;t>r;t--){
+			c[r]=a[t]*b[r-t]+c[r-1];
+		}
+		c[r]=c[r]+t;
+		t=c[r]/10;
+		cout<<c[r]%10;
+	}
+}

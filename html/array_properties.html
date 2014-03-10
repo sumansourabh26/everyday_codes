@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Object</title>
+<script type="text/javascript">
+	function person(name, age){
+		this.name = name;
+		this.age = age;
+	}
+	var bucky = new person("suman",19);
+	var taylor = new  person("taylor swift", 23);
+</script>
+
+
+</head>
+
+<body>
+	<script type="text/javascript">
+		var people = new Array(new person("suman", 21), new person("taylor",23));
+		var names = new Array("par", "apad","slakfl");
+//		var names =  new Array(new person("pragya",18), new person("krati",18), new person("anuradha",19));
+//		document.write(people.length);
+		var i = people.concat(names);
+		document.write(i[3]);
+	</script>
+	
+</body>
+</html>

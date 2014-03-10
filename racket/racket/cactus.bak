@@ -1,0 +1,63 @@
+#lang racket
+(require plot)
+(plot-new-window? #t)
+(plot-width 900)
+(plot-height 900)
+
+(define (draw curve)
+ (plot (parametric
+    (lambda (t) (vector (x-of (curve t))
+                       (y-of (curve t))))
+0 1 #:width 1 #:samples 10000
+#:x-min -20 #:x-max 20
+#:y-min -20 #:y-max 20)))
+
+(define (x-of point)
+    (point 0))
+
+(define (y-of point)
+   (point 1))
+
+(define (cactus n)
+  (lambda (t) ((rotate-about 0 0 (tilted-cactus-at 0 0 n) (/  pi 4) ) t )))
+
+(define (make-point x y)
+   (lambda (bit)
+      (if (zero? bit) x y)))
+   
+(define (tilted-cactus-at x y n)
+  (lambda (t) (if (= n -1) (make-point x y)
+                  
+                   (let* ((extra (+ (/ (length n) 2) (/(length  (- n 1)) 2) )))
+                     (cond ((< t (/ 1 16)) 
+                            ((vertical-line (make-point (- x (/ (length n) 2)) (- y (/ (length n) 2))) (length n)) (* 16 t)))
+                           ((and (> t (/ 1 16)) (< t (/ 5 16))) 
+                            ((rotate-about (- x extra) (+ y extra) (tilted-cactus-at (- x extra) (+ y extra) (- n 1)) (/ pi 2)) (/ (- (* 16 t) 1) 4)))        
+                           ((and (> t (/ 5 16)) (< t (/ 6 16))) 
+                            ((horizontal-line (make-point (- x (/ (length n) 2)) (+ y (/ (length n) 2))) (length n)) (- (* 16 t) 5)))
+                           ((and (> t (/ 6 16)) (< t (/ 10 16))) 
+                            ((tilted-cactus-at (+ x extra) (+ y extra) (- n 1)) (/ (- (* 16 t) 6) 4)))   
+                           ((and (> t (/ 10 16)) (< t (/ 11 16)))
+                            ((vertical-line (make-point (+ x (/ (length n) 2)) (+ y (/ (length n) 2))) (* -1 (length n))) (- (* 16 t)10)))
+                           ((and (> t (/ 11 16)) (< t (/ 15 16))) 
+                            ((rotate-about (+ x extra) (- y extra) (tilted-cactus-at (+ x extra) (- y extra) (- n 1)) (/ (- pi) 2)) (/ (- (* 16 t) 11)4)))   
+                           ((> t (/ 15 16)) 
+                            ((horizontal-line (make-point (+ x (/ (length n) 2)) (- y (/ (length n) 2))) (* -1 (length n))) (- (* 16 t) 15))))))))
+
+(define ( length l) (if (< l 0) 0 ( expt 3 l) ))
+(define (rotate-about  x0 y0 curve radians)
+  (lambda (t) 
+    (let* ((ct (curve t))
+           (x (x-of ct))
+           (y (y-of ct)))
+      (make-point (- (+ x0 (* (- x x0) (cos radians))) (* (- y y0) (sin radians)))
+                  (+ (+ y0 (* (- x x0) (sin radians))) (* (- y y0) (cos radians)))))))
+
+
+(define (horizontal-line p l)
+  (lambda (t) (make-point  (+ (x-of p) (* l t)) (y-of p))))
+
+(define (vertical-line p l)
+  (lambda (t) (make-point (x-of p) (+ (y-of p) (* l t)))))
+                      
+                  

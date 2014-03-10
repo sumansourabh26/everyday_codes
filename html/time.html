@@ -1,0 +1,19 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+	function printtime(){
+		var now = new Date();
+		var hour = now.getHours();
+		var mins = now.getMinutes();
+		var sec = now.getSeconds();
+		
+		document.write(hour +":"+mins+":"+sec+" "+ now.getTime()+"<br>");
+	}
+	setInterval("printtime()",1000);
+	</script>
+</body>
+</html>

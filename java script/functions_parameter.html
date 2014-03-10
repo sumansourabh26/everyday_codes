@@ -1,0 +1,28 @@
+<html>
+<head>
+</head>
+<body> 
+	<script type = "text/javascript">
+	
+//		meatball("ok done");
+	</script>
+ 
+	 <form action="">
+	 	<input type="text" id="in" onBlur="w('suman s')" onFocus="fade('suman s')" value='suman s'>
+	 	<input type = "button" value="touch me" onclick="meatball('suman')">
+	 </form>
+	<script type="text/javascript">
+		function fade(x){
+			if(document.getElementById("in").value== x)
+				document.getElementById("in").value="";
+		}
+		function w(x){
+			if(document.getElementById("in").value=="")
+			document.getElementById("in").value=x;
+		}
+		function meatball(x){
+			alert(4+ x);
+		}
+	</script>
+</body>
+</html>

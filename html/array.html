@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Object</title>
+<script type="text/javascript">
+	function person(name, age){
+		this.name = name;
+		this.age = age;
+	}
+	var bucky = new person("suman",19);
+	var taylor = new  person("taylor swift", 23);
+</script>
+
+
+</head>
+
+<body>
+	<script type="text/javascript">
+		var people = new Array(new person("suman", 21), new person("taylor",23));
+		document.write(people[1 ].name);
+	</script>
+	
+</body>
+</html>
