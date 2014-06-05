@@ -1,0 +1,47 @@
+import java.awt.*;
+import java.awt.event.*;
+import java.util.*;
+import javax.swing.*;
+
+import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
+
+
+public class JClientmain extends JFrame {
+	ArrayList<JClient> connectionArrayList;
+	JLabel label;
+	TextField serverTextField;
+	Button connectButton;
+	
+	public JClientmain() {
+		super("TO CALL SERVER...");
+		connectionArrayList = new ArrayList<JClient>();
+		setLayout(new FlowLayout());
+		
+		label = new JLabel("Enter the IP"); add(label);
+		serverTextField = new TextField("localhost"); add(serverTextField);
+		
+		connectButton = new Button("CONNECT...");add(connectButton);
+		connectButton.addActionListener(
+			new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					if(label.getText().equals("")) {
+						JOptionPane.showMessageDialog(null, "Please enter a valid IP ADDRESS to connect", "ERROR", JOptionPane.ERROR_MESSAGE);				
+					}
+					else {
+						
+					}
+					
+				}
+			}
+				
+		);
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.3" sequence="0" timestamp="1400829470000" analysisTimestamp="1400841485625" release="">
+  <Project projectName="">
+    <Jar>/home/rakesh/bin/Wegilant/findbugs-2.0.3/buggyjars/MainActivity.class</Jar>
+    <Plugin id="plugin0" enabled="true"/>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="com.example.buggyopenconnection.MainActivity">
+      <SourceLine classname="com.example.buggyopenconnection.MainActivity" start="21" end="69" sourcefile="MainActivity.java" sourcepath="com/example/buggyopenconnection/MainActivity.java"/>
+    </Class>
+    <Method classname="com.example.buggyopenconnection.MainActivity" name="func" signature="()V" isStatic="false">
+      <SourceLine classname="com.example.buggyopenconnection.MainActivity" start="36" end="51" startBytecode="0" endBytecode="266" sourcefile="MainActivity.java" sourcepath="com/example/buggyopenconnection/MainActivity.java"/>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter" start="90" end="91" startBytecode="0" endBytecode="68" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
+    </Method>
+    <SourceLine classname="com.example.buggyopenconnection.MainActivity" start="41" end="41" startBytecode="61" endBytecode="61" sourcefile="MainActivity.java" sourcepath="com/example/buggyopenconnection/MainActivity.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="7">
+    <MissingClass>android.os.Environment</MissingClass>
+    <MissingClass>android.support.v4.app.FragmentManager</MissingClass>
+    <MissingClass>android.support.v4.app.FragmentTransaction</MissingClass>
+    <MissingClass>android.support.v7.app.ActionBarActivity</MissingClass>
+    <MissingClass>android.view.MenuInflater</MissingClass>
+    <MissingClass>android.view.MenuItem</MissingClass>
+    <MissingClass>com.example.buggyopenconnection.MainActivity$PlaceholderFragment</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 23 May 2014 12:47:50 +0530" total_classes="1" referenced_classes="12" total_bugs="1" total_size="31" num_packages="1" vm_version="24.51-b03" cpu_seconds="10.28" clock_seconds="3.57" peak_mbytes="99.19" alloc_mbytes="835.50" gc_seconds="0.05" priority_1="1">
+    <PackageStats package="com.example.buggyopenconnection" total_bugs="1" total_types="1" total_size="31" priority_1="1">
+      <ClassStats class="com.example.buggyopenconnection.MainActivity" sourceFile="MainActivity.java" interface="false" size="31" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="816" invocations="276" avgMicrosecondsPerInvocation="2957" maxMicrosecondsPerInvocation="48731" standardDeviationMircosecondsPerInvocation="6106"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="233" invocations="12" avgMicrosecondsPerInvocation="19464" maxMicrosecondsPerInvocation="58118" standardDeviationMircosecondsPerInvocation="20862"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="156" invocations="238" avgMicrosecondsPerInvocation="659" maxMicrosecondsPerInvocation="8717" standardDeviationMircosecondsPerInvocation="1119"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="94" invocations="35" avgMicrosecondsPerInvocation="2707" maxMicrosecondsPerInvocation="10011" standardDeviationMircosecondsPerInvocation="2314"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="93" invocations="5" avgMicrosecondsPerInvocation="18677" maxMicrosecondsPerInvocation="89348" standardDeviationMircosecondsPerInvocation="35339"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="92" invocations="12" avgMicrosecondsPerInvocation="7685" maxMicrosecondsPerInvocation="52641" standardDeviationMircosecondsPerInvocation="17345"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="88" invocations="12" avgMicrosecondsPerInvocation="7361" maxMicrosecondsPerInvocation="22903" standardDeviationMircosecondsPerInvocation="7876"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="80" invocations="12" avgMicrosecondsPerInvocation="6671" maxMicrosecondsPerInvocation="31338" standardDeviationMircosecondsPerInvocation="9294"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="78" invocations="12" avgMicrosecondsPerInvocation="6535" maxMicrosecondsPerInvocation="28828" standardDeviationMircosecondsPerInvocation="8341"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="77" invocations="25" avgMicrosecondsPerInvocation="3108" maxMicrosecondsPerInvocation="31614" standardDeviationMircosecondsPerInvocation="6510"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="61" invocations="12" avgMicrosecondsPerInvocation="5125" maxMicrosecondsPerInvocation="23218" standardDeviationMircosecondsPerInvocation="6889"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="58" invocations="6" avgMicrosecondsPerInvocation="9752" maxMicrosecondsPerInvocation="31176" standardDeviationMircosecondsPerInvocation="10360"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="54" invocations="1" avgMicrosecondsPerInvocation="54718" maxMicrosecondsPerInvocation="54718" standardDeviationMircosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="52" invocations="279" avgMicrosecondsPerInvocation="189" maxMicrosecondsPerInvocation="943" standardDeviationMircosecondsPerInvocation="110"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

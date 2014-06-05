@@ -1,0 +1,16 @@
+import java.awt.*;
+import java.awt.event.*;
+import java.util.*;
+import javax.swing.*;
+
+
+public class JClientmain extends JFrame {
+	ArrayList<JClient> connectionArrayList;
+	
+	public JClientmain() {
+		super("TO CALL SERVER...");
+		connectionArrayList = new ArrayList<JClient>();
+		
+	}
+
+}

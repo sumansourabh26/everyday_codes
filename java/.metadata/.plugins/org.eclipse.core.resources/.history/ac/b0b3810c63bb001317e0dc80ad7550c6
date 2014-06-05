@@ -1,0 +1,27 @@
+import java.awt.*;
+import java.awt.event.*;
+import java.util.*;
+import javax.swing.*;
+
+
+public class JClientmain extends JFrame {
+	ArrayList<JClient> connectionArrayList;
+	JLabel label;
+	TextField serverTextField;
+	Button connectButton;
+	
+	public JClientmain() {
+		super("TO CALL SERVER...");
+		connectionArrayList = new ArrayList<JClient>();
+		setLayout(new FlowLayout());
+		
+		label = new JLabel("Enter the IP"); add(label);
+		serverTextField = new TextField("localhost"); add(serverTextField);
+		
+		
+		
+		
+		
+	}
+
+}

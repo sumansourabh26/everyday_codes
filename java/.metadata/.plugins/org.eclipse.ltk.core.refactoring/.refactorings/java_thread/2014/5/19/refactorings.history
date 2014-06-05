@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;fbCheck/src&apos;&#x0D;&#x0A;- Original project: &apos;java_thread&apos;&#x0D;&#x0A;- Destination element: &apos;fbCheck/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     tuna.java&#x0D;&#x0A;     bucky.java" description="Copy compilation units" destination="=fbCheck/src" element1="/src&lt;{tuna.java" element2="/src&lt;{bucky.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1399402924797" units="2" version="1.0"/>
+</session>

@@ -22,7 +22,7 @@ class c2 extends JFrame{
 				detail += "either center mouse button";
 			else 
 				detail += "with left mouse button";			
-			statusbar.setText(detail);					
+			statusbar.setText(detail);
 		}
 	}
 }

@@ -1,0 +1,28 @@
+
+public class try1 {
+
+	/**
+	 * @param args
+	 */
+	static void change(int a){
+		a = a+5;
+		
+	}
+	public static void main(String[] args) {
+		int a = 5;
+		int b = 6;
+		
+		
+		System.out.printf("%d %d",a,b);
+		
+		a = b;
+		a =7;
+		System.out.printf("%d %d",a,b);
+		
+		b = 9;
+		System.out.printf("%d %d",a,b);
+		
+
+	}
+
+}

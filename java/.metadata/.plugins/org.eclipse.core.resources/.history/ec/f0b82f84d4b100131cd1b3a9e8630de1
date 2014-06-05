@@ -1,0 +1,8 @@
+
+public class american extends human {
+
+	public american() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

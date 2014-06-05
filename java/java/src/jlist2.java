@@ -24,7 +24,8 @@ class jlist_gui2 extends JFrame{
 		moveButton.addActionListener(
 				new ActionListener(){
 					public void actionPerformed(ActionEvent event) {
-						rlist.setListData(llist.getSelectedValues());
+						rlist.add
+						
 						
 					}
 				}

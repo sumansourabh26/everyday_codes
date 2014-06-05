@@ -1,0 +1,8 @@
+
+public class human {
+	void call(String b) {
+		String c = "ram";
+		System.out.println(b=="ram");
+	}
+	
+}

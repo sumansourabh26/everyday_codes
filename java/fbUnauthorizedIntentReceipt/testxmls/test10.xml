@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.3" sequence="0" timestamp="1400829470000" analysisTimestamp="1400841399886" release="">
+  <Project projectName="">
+    <Jar>/home/rakesh/bin/Wegilant/findbugs-2.0.3/buggyjars/MainActivity.class</Jar>
+    <Plugin id="plugin0" enabled="true"/>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="com.example.buggyopenconnection.MainActivity">
+      <SourceLine classname="com.example.buggyopenconnection.MainActivity" start="21" end="69" sourcefile="MainActivity.java" sourcepath="com/example/buggyopenconnection/MainActivity.java"/>
+    </Class>
+    <Method classname="com.example.buggyopenconnection.MainActivity" name="func" signature="()V" isStatic="false">
+      <SourceLine classname="com.example.buggyopenconnection.MainActivity" start="36" end="51" startBytecode="0" endBytecode="266" sourcefile="MainActivity.java" sourcepath="com/example/buggyopenconnection/MainActivity.java"/>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter" start="90" end="91" startBytecode="0" endBytecode="68" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
+    </Method>
+    <SourceLine classname="com.example.buggyopenconnection.MainActivity" start="41" end="41" startBytecode="61" endBytecode="61" sourcefile="MainActivity.java" sourcepath="com/example/buggyopenconnection/MainActivity.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="7">
+    <MissingClass>android.os.Environment</MissingClass>
+    <MissingClass>android.support.v4.app.FragmentManager</MissingClass>
+    <MissingClass>android.support.v4.app.FragmentTransaction</MissingClass>
+    <MissingClass>android.support.v7.app.ActionBarActivity</MissingClass>
+    <MissingClass>android.view.MenuInflater</MissingClass>
+    <MissingClass>android.view.MenuItem</MissingClass>
+    <MissingClass>com.example.buggyopenconnection.MainActivity$PlaceholderFragment</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 23 May 2014 12:47:50 +0530" total_classes="1" referenced_classes="12" total_bugs="1" total_size="31" num_packages="1" vm_version="24.51-b03" cpu_seconds="10.31" clock_seconds="3.52" peak_mbytes="92.90" alloc_mbytes="835.50" gc_seconds="0.03" priority_1="1">
+    <PackageStats package="com.example.buggyopenconnection" total_bugs="1" total_types="1" total_size="31" priority_1="1">
+      <ClassStats class="com.example.buggyopenconnection.MainActivity" sourceFile="MainActivity.java" interface="false" size="31" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="737" invocations="276" avgMicrosecondsPerInvocation="2672" maxMicrosecondsPerInvocation="42382" standardDeviationMircosecondsPerInvocation="5383"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="248" invocations="12" avgMicrosecondsPerInvocation="20675" maxMicrosecondsPerInvocation="86017" standardDeviationMircosecondsPerInvocation="24597"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="164" invocations="35" avgMicrosecondsPerInvocation="4701" maxMicrosecondsPerInvocation="16922" standardDeviationMircosecondsPerInvocation="3861"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="138" invocations="238" avgMicrosecondsPerInvocation="583" maxMicrosecondsPerInvocation="7141" standardDeviationMircosecondsPerInvocation="1018"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="119" invocations="12" avgMicrosecondsPerInvocation="9956" maxMicrosecondsPerInvocation="52411" standardDeviationMircosecondsPerInvocation="14206"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="119" invocations="12" avgMicrosecondsPerInvocation="9953" maxMicrosecondsPerInvocation="90137" standardDeviationMircosecondsPerInvocation="25467"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="93" invocations="5" avgMicrosecondsPerInvocation="18753" maxMicrosecondsPerInvocation="89781" standardDeviationMircosecondsPerInvocation="35516"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="86" invocations="12" avgMicrosecondsPerInvocation="7229" maxMicrosecondsPerInvocation="18909" standardDeviationMircosecondsPerInvocation="7111"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="74" invocations="12" avgMicrosecondsPerInvocation="6242" maxMicrosecondsPerInvocation="25819" standardDeviationMircosecondsPerInvocation="8202"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="68" invocations="25" avgMicrosecondsPerInvocation="2740" maxMicrosecondsPerInvocation="22319" standardDeviationMircosecondsPerInvocation="5259"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="57" invocations="6" avgMicrosecondsPerInvocation="9643" maxMicrosecondsPerInvocation="29802" standardDeviationMircosecondsPerInvocation="9868"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="57" invocations="1" avgMicrosecondsPerInvocation="57431" maxMicrosecondsPerInvocation="57431" standardDeviationMircosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="57" invocations="12" avgMicrosecondsPerInvocation="4769" maxMicrosecondsPerInvocation="18577" standardDeviationMircosecondsPerInvocation="6107"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

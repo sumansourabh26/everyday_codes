@@ -1,0 +1,13 @@
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+
+public class JClientmain extends JFrame {
+	public JClientmain() {
+		super("TO CALL SERVER...");
+		
+	}
+
+}

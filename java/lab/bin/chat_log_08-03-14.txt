@@ -1,0 +1,17 @@
+
+ ----------------- Printing Log ---------------------
+Tue Apr 08 23:08:50 IST 2014 You : FreeForChatCode73t6384
+Tue Apr 08 23:08:55 IST 2014 localhost : ChatAccept
+
+ ----------------- Log Finished ---------------------
+ ----------------- Printing Log ---------------------
+
+ ----------------- Log Finished ---------------------
+ ----------------- Printing Log ---------------------
+Tue Apr 08 23:08:35 IST 2014 You : FreeForChatCode73t6384
+Tue Apr 08 23:08:41 IST 2014 localhost : ChatAccept
+
+ ----------------- Log Finished ---------------------
+ ----------------- Printing Log ---------------------
+
+ ----------------- Log Finished ---------------------

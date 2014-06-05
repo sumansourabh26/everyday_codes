@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.3" sequence="0" timestamp="1400829470000" analysisTimestamp="1400838134132" release="">
+  <Project projectName="">
+    <Jar>/home/rakesh/bin/Wegilant/findbugs-2.0.3/buggyjars/MainActivity.class</Jar>
+    <Plugin id="plugin0" enabled="true"/>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="com.example.buggyopenconnection.MainActivity">
+      <SourceLine classname="com.example.buggyopenconnection.MainActivity" start="21" end="69" sourcefile="MainActivity.java" sourcepath="com/example/buggyopenconnection/MainActivity.java"/>
+    </Class>
+    <Method classname="com.example.buggyopenconnection.MainActivity" name="func" signature="()V" isStatic="false">
+      <SourceLine classname="com.example.buggyopenconnection.MainActivity" start="36" end="51" startBytecode="0" endBytecode="266" sourcefile="MainActivity.java" sourcepath="com/example/buggyopenconnection/MainActivity.java"/>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter" start="90" end="91" startBytecode="0" endBytecode="68" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
+    </Method>
+    <SourceLine classname="com.example.buggyopenconnection.MainActivity" start="41" end="41" startBytecode="61" endBytecode="61" sourcefile="MainActivity.java" sourcepath="com/example/buggyopenconnection/MainActivity.java"/>
+  </BugInstance>
+  <BugInstance type="PATH_TRAVERSAL_IN" priority="2" abbrev="SECPTI" category="SECURITY">
+    <Class classname="com.example.buggyopenconnection.MainActivity">
+      <SourceLine classname="com.example.buggyopenconnection.MainActivity" start="21" end="69" sourcefile="MainActivity.java" sourcepath="com/example/buggyopenconnection/MainActivity.java"/>
+    </Class>
+    <Method classname="com.example.buggyopenconnection.MainActivity" name="func" signature="()V" isStatic="false">
+      <SourceLine classname="com.example.buggyopenconnection.MainActivity" start="36" end="51" startBytecode="0" endBytecode="266" sourcefile="MainActivity.java" sourcepath="com/example/buggyopenconnection/MainActivity.java"/>
+    </Method>
+    <SourceLine classname="com.example.buggyopenconnection.MainActivity" start="39" end="39" startBytecode="41" endBytecode="41" sourcefile="MainActivity.java" sourcepath="com/example/buggyopenconnection/MainActivity.java"/>
+    <String value="java.io.File"/>
+  </BugInstance>
+  <Errors errors="2" missingClasses="7">
+    <Error>
+      <ErrorMessage>Exception analyzing com.example.buggyopenconnection.MainActivity using detector com.h3xstream.findsecbugs.HardcodedSDCardDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getStringConstantOperand called but value not available</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.DismantleBytecode.getStringConstantOperand(DismantleBytecode.java:317)</StackTrace>
+      <StackTrace>com.h3xstream.findsecbugs.HardcodedSDCardDetector.sawOpcode(HardcodedSDCardDetector.java:25)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.DismantleBytecode.visit(DismantleBytecode.java:820)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.detect.FindRunInvocations.visit(FindRunInvocations.java:56)</StackTrace>
+      <StackTrace>com.h3xstream.findsecbugs.HardcodedSDCardDetector.visit(HardcodedSDCardDetector.java:21)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.BetterVisitor.visitCode(BetterVisitor.java:217)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitCode(PreorderVisitor.java:223)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Code.accept(Code.java:133)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:289)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:369)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:214)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BytecodeScanningDetector.visitClassContext(BytecodeScanningDetector.java:37)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:74)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1209)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:282)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:393)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1317)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:196)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.example.buggyopenconnection.MainActivity using detector fbinsecurestorage.MainClass</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getStringConstantOperand called but value not available</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.DismantleBytecode.getStringConstantOperand(DismantleBytecode.java:317)</StackTrace>
+      <StackTrace>fbinsecurestorage.MainClass.sawOpcode(MainClass.java:25)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.DismantleBytecode.visit(DismantleBytecode.java:820)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.detect.FindRunInvocations.visit(FindRunInvocations.java:56)</StackTrace>
+      <StackTrace>fbinsecurestorage.MainClass.visit(MainClass.java:21)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.BetterVisitor.visitCode(BetterVisitor.java:217)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitCode(PreorderVisitor.java:223)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Code.accept(Code.java:133)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:289)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:369)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:214)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BytecodeScanningDetector.visitClassContext(BytecodeScanningDetector.java:37)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:74)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1209)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:282)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:393)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1317)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:196)</StackTrace>
+    </Error>
+    <MissingClass>android.os.Environment</MissingClass>
+    <MissingClass>android.support.v4.app.FragmentManager</MissingClass>
+    <MissingClass>android.support.v4.app.FragmentTransaction</MissingClass>
+    <MissingClass>android.support.v7.app.ActionBarActivity</MissingClass>
+    <MissingClass>android.view.MenuInflater</MissingClass>
+    <MissingClass>android.view.MenuItem</MissingClass>
+    <MissingClass>com.example.buggyopenconnection.MainActivity$PlaceholderFragment</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 23 May 2014 12:47:50 +0530" total_classes="1" referenced_classes="12" total_bugs="2" total_size="31" num_packages="1" vm_version="24.51-b03" cpu_seconds="9.76" clock_seconds="3.32" peak_mbytes="93.08" alloc_mbytes="835.50" gc_seconds="0.04" priority_2="1" priority_1="1">
+    <PackageStats package="com.example.buggyopenconnection" total_bugs="2" total_types="1" total_size="31" priority_2="1" priority_1="1">
+      <ClassStats class="com.example.buggyopenconnection.MainActivity" sourceFile="MainActivity.java" interface="false" size="31" bugs="2" priority_2="1" priority_1="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="699" invocations="276" avgMicrosecondsPerInvocation="2533" maxMicrosecondsPerInvocation="42568" standardDeviationMircosecondsPerInvocation="5318"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="198" invocations="12" avgMicrosecondsPerInvocation="16541" maxMicrosecondsPerInvocation="46939" standardDeviationMircosecondsPerInvocation="17121"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="144" invocations="238" avgMicrosecondsPerInvocation="609" maxMicrosecondsPerInvocation="7669" standardDeviationMircosecondsPerInvocation="1069"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="87" invocations="12" avgMicrosecondsPerInvocation="7321" maxMicrosecondsPerInvocation="57851" standardDeviationMircosecondsPerInvocation="17303"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="80" invocations="35" avgMicrosecondsPerInvocation="2305" maxMicrosecondsPerInvocation="7918" standardDeviationMircosecondsPerInvocation="2045"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="75" invocations="25" avgMicrosecondsPerInvocation="3005" maxMicrosecondsPerInvocation="27442" standardDeviationMircosecondsPerInvocation="6157"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="72" invocations="12" avgMicrosecondsPerInvocation="6061" maxMicrosecondsPerInvocation="18852" standardDeviationMircosecondsPerInvocation="6271"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="69" invocations="5" avgMicrosecondsPerInvocation="13935" maxMicrosecondsPerInvocation="65511" standardDeviationMircosecondsPerInvocation="25796"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="68" invocations="12" avgMicrosecondsPerInvocation="5668" maxMicrosecondsPerInvocation="21911" standardDeviationMircosecondsPerInvocation="6517"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="61" invocations="12" avgMicrosecondsPerInvocation="5130" maxMicrosecondsPerInvocation="21091" standardDeviationMircosecondsPerInvocation="6517"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="60" invocations="279" avgMicrosecondsPerInvocation="217" maxMicrosecondsPerInvocation="13886" standardDeviationMircosecondsPerInvocation="827"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="52" invocations="1" avgMicrosecondsPerInvocation="52392" maxMicrosecondsPerInvocation="52392" standardDeviationMircosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="49" invocations="12" avgMicrosecondsPerInvocation="4158" maxMicrosecondsPerInvocation="16677" standardDeviationMircosecondsPerInvocation="5098"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="46" invocations="6" avgMicrosecondsPerInvocation="7700" maxMicrosecondsPerInvocation="20830" standardDeviationMircosecondsPerInvocation="7154"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,10 +1,8 @@
-/*to do: make an marry image, 
- *       download an child photo,
- *       date pic*/ 
 import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.*;
+import javax.swing.text.TabableView;
 
 class level2 extends JFrame{
 	JRadioButton yes,no;
@@ -70,7 +68,7 @@ class class30 extends JFrame{
 	String name="",syear="";
 	JButton resetbutton, namebutton, yearbutton;
 	JTextField tf;
-	
+	JTextArea Ta; 
 	Icon a = new ImageIcon(getClass().getResource("image/sister.png"));
 	Icon b = new ImageIcon(getClass().getResource("image/2.png"));
 	Icon c = new ImageIcon(getClass().getResource("image/k.png"));
@@ -80,10 +78,14 @@ class class30 extends JFrame{
 		super("profile");
 		setLayout(new FlowLayout());
 		
+		
 		tf = new JTextField("",30);
 		resetbutton = new JButton("reset");namebutton = new JButton("submit as name");
 		yearbutton = new JButton("submit as age");add(tf); add(namebutton);add(yearbutton);add(resetbutton);
-
+		Ta = new JTextArea();
+		
+		Ta.append("kdnkdnf b");
+		Ta.append("kdnkdnf b");add(Ta);
 		
 		handler handle = new handler();
 		resetbutton.addActionListener(handle);namebutton.addActionListener(handle);

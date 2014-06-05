@@ -1,0 +1,21 @@
+
+public class try1 {
+
+	/**
+	 * @param args
+	 */
+	static void change(int a){
+		a = a+5;
+		
+	}
+	public static void main(String[] args) {
+		int a = 5;
+		change(a);
+		
+		String b = "salkm";
+		b.length();
+		
+
+	}
+
+}

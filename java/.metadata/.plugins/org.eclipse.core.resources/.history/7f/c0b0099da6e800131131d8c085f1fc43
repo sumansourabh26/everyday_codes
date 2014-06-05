@@ -1,0 +1,75 @@
+<project name="fbinsecurestorage" default="dist" basedir=".">
+    <description>
+        simple example build file
+    </description>
+<property name="Root.dir" value="/home/rakesh/bin/Wegilant"></property>
+<property name="FindBugs.home" value="${Root.dir}/findbugs-2.0.3"></property>
+<property name="Plugin.name" value="fbinsecurestorage"></property>
+<target name="dist" depends="build">
+	<jar destfile="${FindBugs.home}/plugin/${Plugin.name}.jar">
+	   <fileset dir="bin"/>
+		<zipfileset dir="etc" includes="*.xml" prefix=""></zipfileset>
+	</jar>
+</target>
+
+<path id="classpath">
+        <fileset dir="lib" includes="**/*.jar"/>
+</path>
+<target name="build">
+	<javac srcdir="src" destdir="bin" classpathref="classpath" includeantruntime="false" />
+</target>
+		<property name="testxmldir" value="testxmls"/>
+		<property name="buggyjar" value="${FindBugs.home}/buggyjars/MainActivity.class"/>
+		<target name="execute.findbug" depends="dist">
+			<mkdir dir="${testxmldir}"/>
+			<buildnumber/>
+			<java jar="${FindBugs.home}/lib/findbugs.jar" fork="true">
+				<arg value="-pluginList"/>
+				<arg value="${FindBugs.home}/plugin/${Plugin.name}.jar"/>
+				<arg value="-xml"/>
+				<arg value="-output"/>	
+				<arg value="${testxmldir}/test${build.number}.xml"/>
+				<arg value="${buggyjar}"/>
+			</java>
+			<java jar="${FindBugs.home}/lib/findbugs.jar" fork="true">
+				<arg value="-pluginList"/>
+				<arg value="${FindBugs.home}/plugin/${Plugin.name}.jar"/>
+				<arg value="-html"/>
+				<arg value="-output"/>	
+				<arg value="${testxmldir}/test${build.number}.html"/>
+				<arg value="${buggyjar}"/>
+			</java>
+		</target>
+		<target name="test.xml" depends="execute.findbug">
+				<scriptdef name="xpath-query" language="javascript">
+			        <attribute name="query"/>
+			        <attribute name="xmlfile"/>
+			        <attribute name="addproperty"/>
+	
+			        <![CDATA[
+			            importClass(java.io.FileInputStream);
+			            importClass(javax.xml.xpath.XPath);
+			            importClass(javax.xml.xpath.XPathConstants);
+			            importClass(javax.xml.xpath.XPathFactory);
+			            importClass(org.xml.sax.InputSource);
+	
+			            var exp = attributes.get("query");
+			            var filename = attributes.get("xmlfile");
+			            var input = new InputSource(new FileInputStream(filename));
+			            var xpath = XPathFactory.newInstance().newXPath();
+			            var priority = xpath.evaluate(exp, input, XPathConstants.STRING);
+						var value = false ;
+						if(priority!=''){
+							value = true;
+						}
+			            self.project.setProperty( attributes.get("addproperty"), value );
+	
+			        ]]>
+	
+			    </scriptdef>
+			    <property name="bug.type" value="WIS_INSECURE_STORAGE"/>
+				<xpath-query query="/BugCollection/BugInstance[@type='${bug.type}']"
+			                     xmlFile="${testxmldir}/test${build.number}.xml" addproperty="value"/>
+			        <echo message="Is ${bug.type} error found?: ${value}"/>   			
+		</target>
+</project>

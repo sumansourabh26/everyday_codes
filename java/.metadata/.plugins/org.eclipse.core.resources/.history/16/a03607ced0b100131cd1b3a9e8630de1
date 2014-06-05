@@ -1,0 +1,16 @@
+
+class try1 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		human suman = new human();
+		suman.call();
+		String a = "ram", b = "ram";
+		
+		System.out.println(a==b);
+
+	}
+
+}

@@ -12,6 +12,7 @@ pydevOccurrenceHighlighting=false
 pydevOccurrenceIndication=true
 pydevOccurrenceIndicationColor=127,127,127
 pydevOccurrenceIndicationTextStyle=BOX
+revisionRulerShowAuthor=true
 rubyBlockPairOccurrenceIndication=true
 rubyBlockPairOccurrenceIndicationColor=127,127,127
 rubyBlockPairOccurrenceIndicationHighlighting=false

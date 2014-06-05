@@ -16,7 +16,7 @@ class drop extends JFrame{
 		label = new JComboBox(filename);
 		add(label);
 		
-		label.addActionListener(
+/*		label.addActionListener(
 			new ActionListener(){
 				public void ActionListener(){
 					System.out.print("suman");
@@ -27,6 +27,14 @@ class drop extends JFrame{
 				}
 				
 			}
+		);*/
+		label.addItemListener(
+				new ItemListener() {
+					public void itemStateChanged(ItemEvent arg0) {
+						System.out.print("suman");
+						picture.setIcon(pics[label.getSelectedIndex()]);
+					}
+				}
 		);
 		picture = new JLabel(pics[0]);
 		add(picture);

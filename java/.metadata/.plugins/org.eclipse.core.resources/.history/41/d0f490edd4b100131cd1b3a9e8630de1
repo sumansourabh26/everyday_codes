@@ -1,0 +1,8 @@
+
+public class indian extends human {
+
+	public indian() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

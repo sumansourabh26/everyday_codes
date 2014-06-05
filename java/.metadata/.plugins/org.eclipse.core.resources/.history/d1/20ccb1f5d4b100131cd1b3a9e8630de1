@@ -1,0 +1,7 @@
+
+public class human {
+	void toString(String b) {
+		
+	}
+	
+}

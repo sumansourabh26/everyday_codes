@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<bundle bundleID="998" localization="plugin" name="findbugs" project="findbugs-2.0.3">
+		<library name="findbugs.jar"/>
+		<library name="lib/AppleJavaExtensions.jar"/>
+		<library name="lib/bcel.jar"/>
+		<library name="lib/dom4j-1.6.1.jar"/>
+		<library name="lib/junit.jar"/>
+		<library name="lib/asm-3.3.jar"/>
+		<library name="lib/asm-tree-3.3.jar"/>
+		<library name="lib/asm-commons-3.3.jar"/>
+		<library name="lib/jaxen-1.1.6.jar"/>
+		<library name="lib/jFormatString.jar"/>
+		<library name="lib/commons-lang-2.6.jar"/>
+		<library name="lib/jsr305.jar"/>
+		<library name="lib/ant.jar"/>
+		<library name="lib/asm-analysis-3.3.jar"/>
+		<library name="lib/asm-util-3.3.jar"/>
+		<library name="lib/asm-xml-3.3.jar"/>
+		<library name="lib/jcip-annotations.jar"/>
+		<library name="lib/jdepend-2.9.jar"/>
+		<library name="lib/yjp-controller-api-redist.jar"/>
+	</bundle>
+</map>

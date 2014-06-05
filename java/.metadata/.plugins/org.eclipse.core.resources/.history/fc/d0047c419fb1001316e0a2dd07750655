@@ -1,0 +1,19 @@
+
+public class try1 {
+
+	/**
+	 * @param args
+	 */
+	static int change(int a){
+		a = a+5;
+		return a;
+	}
+	public static void main(String[] args) {
+		int a = 5;
+		int b = change(a);
+		
+		System.out.println(a);		
+
+	}
+
+}

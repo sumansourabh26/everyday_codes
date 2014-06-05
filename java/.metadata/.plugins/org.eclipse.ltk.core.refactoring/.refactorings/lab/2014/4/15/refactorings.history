@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 8 elements to &apos;lab12/src&apos;&#x0A;- Original project: &apos;lab&apos;&#x0A;- Destination element: &apos;lab12/src&apos;&#x0A;- Original elements:&#x0A;     activeServerList.java&#x0A;     JServer.java&#x0A;     JChatComm.java&#x0A;     jtalkG18.java&#x0A;     JClient.java&#x0A;     JPacket.java&#x0A;     JMessage.java&#x0A;     JChatSession.java" description="Copy compilation units" destination="=lab12/src" element1="/src&lt;{activeServerList.java" element2="/src&lt;{JServer.java" element3="/src&lt;{JChatComm.java" element4="/src&lt;{jtalkG18.java" element5="/src&lt;{JClient.java" element6="/src&lt;{JPacket.java" element7="/src&lt;{JMessage.java" element8="/src&lt;{JChatSession.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1396974558154" units="8" version="1.0"/>
+</session>

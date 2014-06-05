@@ -1,0 +1,17 @@
+
+class try1 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		human suman = new human();
+		//suman.call();
+		String a = "ra", b = "ram";
+		
+		suman.call(a);
+		
+
+	}
+
+}

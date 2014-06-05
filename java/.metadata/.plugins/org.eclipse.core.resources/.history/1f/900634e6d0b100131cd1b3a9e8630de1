@@ -1,0 +1,7 @@
+
+public class human {
+	void call() {
+		System.out.println("I am human");
+	}
+	
+}

@@ -1,0 +1,38 @@
+import javax.swing.*;
+import java.io.IOException;
+import java.util.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class jtalkG18 {
+
+	public static void main(String[] args) {
+		
+		if(args.length == 0) {
+			JServer myJServer = new JServer();
+			try {
+				myJServer.acceptConnection();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		else {
+				
+			try {
+				String result = (String)JOptionPane.showInputDialog(null, "enter the server you wanna connect to", "Connect to", EXIT_ON_CLOSE);
+				
+				
+			}
+				
+				
+				
+//			} catch (IOException e) {
+//				e.printStackTrace();
+//				System.out.println("\n stack trace error\n");
+//			}
+		}
+	}
+	
+
+}

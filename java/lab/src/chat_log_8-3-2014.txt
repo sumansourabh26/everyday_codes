@@ -1,0 +1,125 @@
+
+ ----------------- Printing Log ---------------------
+Tue Apr 08 22:16:28 IST 2014 You : FreeForChatCode73t6384
+Tue Apr 08 22:16:32 IST 2014 You : ChatAccept
+
+ ----------------- Log Finished ---------------------
+ ----------------- Printing Log ---------------------
+
+ ----------------- Log Finished ---------------------
+ ----------------- Printing Log ---------------------
+Tue Apr 08 22:32:36 IST 2014 You : hgvhbjbkj
+Tue Apr 08 22:32:39 IST 2014 localhost : Good to go
+Tue Apr 08 22:32:39 IST 2014 localhost : enter message
+Tue Apr 08 22:32:39 IST 2014 localhost : enter message
+Tue Apr 08 22:32:41 IST 2014 You : enter message
+Tue Apr 08 22:32:56 IST 2014 localhost : End Chat.
+
+ ----------------- Log Finished ---------------------
+ ----------------- Printing Log ---------------------
+Tue Apr 08 22:31:36 IST 2014 You : FreeForChatCode73t6384
+Tue Apr 08 22:31:39 IST 2014 localhost : ChatAccept
+Tue Apr 08 22:32:36 IST 2014 localhost : hgvhbjbkj
+Tue Apr 08 22:32:39 IST 2014 You : Good to go
+Tue Apr 08 22:32:39 IST 2014 You : enter message
+Tue Apr 08 22:32:39 IST 2014 You : enter message
+Tue Apr 08 22:32:41 IST 2014 localhost : enter message
+Tue Apr 08 22:32:56 IST 2014 You : End Chat.
+
+ ----------------- Log Finished ---------------------
+ ----------------- Printing Log ---------------------
+Tue Apr 08 22:35:03 IST 2014 localhost : Good to go
+Tue Apr 08 22:35:11 IST 2014 You : enter your message here :(
+
+ ----------------- Log Finished ---------------------
+ ----------------- Printing Log ---------------------
+Tue Apr 08 22:34:51 IST 2014 You : FreeForChatCode73t6384
+Tue Apr 08 22:34:54 IST 2014 localhost : ChatAccept
+Tue Apr 08 22:35:03 IST 2014 You : Good to go
+Tue Apr 08 22:35:11 IST 2014 localhost : enter your message here :(
+
+ ----------------- Log Finished ---------------------
+ ----------------- Printing Log ---------------------
+Tue Apr 08 22:38:51 IST 2014 You : enter your messag'e here
+Tue Apr 08 22:38:56 IST 2014 You : enter message
+Tue Apr 08 22:38:56 IST 2014 You : enter message
+Tue Apr 08 22:38:57 IST 2014 You : enter message
+Tue Apr 08 22:38:57 IST 2014 You : enter message
+Tue Apr 08 22:38:57 IST 2014 You : enter message
+Tue Apr 08 22:38:57 IST 2014 You : enter message
+Tue Apr 08 22:38:57 IST 2014 You : enter message
+Tue Apr 08 22:38:58 IST 2014 You : enter message
+Tue Apr 08 22:38:59 IST 2014 localhost : Good to go
+Tue Apr 08 22:39:00 IST 2014 localhost : enter message
+Tue Apr 08 22:39:00 IST 2014 localhost : enter message
+Tue Apr 08 22:39:00 IST 2014 localhost : enter message
+Tue Apr 08 22:39:00 IST 2014 localhost : enter message
+Tue Apr 08 22:39:00 IST 2014 localhost : enter message
+Tue Apr 08 22:39:01 IST 2014 localhost : enter message
+Tue Apr 08 22:39:01 IST 2014 localhost : enter message
+Tue Apr 08 22:39:01 IST 2014 localhost : enter message
+Tue Apr 08 22:39:01 IST 2014 localhost : enter message
+Tue Apr 08 22:39:01 IST 2014 localhost : enter message
+Tue Apr 08 22:39:02 IST 2014 localhost : enter message
+Tue Apr 08 22:39:02 IST 2014 localhost : enter message
+Tue Apr 08 22:39:02 IST 2014 localhost : enter message
+Tue Apr 08 22:39:02 IST 2014 localhost : enter message
+Tue Apr 08 22:39:04 IST 2014 You : enter message
+Tue Apr 08 22:39:04 IST 2014 You : enter message
+Tue Apr 08 22:39:04 IST 2014 You : enter message
+Tue Apr 08 22:39:05 IST 2014 You : enter message
+Tue Apr 08 22:39:05 IST 2014 You : enter message
+Tue Apr 08 22:39:05 IST 2014 You : enter message
+
+ ----------------- Log Finished ---------------------
+ ----------------- Printing Log ---------------------
+Tue Apr 08 22:38:44 IST 2014 You : FreeForChatCode73t6384
+Tue Apr 08 22:38:48 IST 2014 localhost : ChatAccept
+Tue Apr 08 22:38:51 IST 2014 localhost : enter your messag'e here
+Tue Apr 08 22:38:56 IST 2014 localhost : enter message
+Tue Apr 08 22:38:56 IST 2014 localhost : enter message
+Tue Apr 08 22:38:57 IST 2014 localhost : enter message
+Tue Apr 08 22:38:57 IST 2014 localhost : enter message
+Tue Apr 08 22:38:57 IST 2014 localhost : enter message
+Tue Apr 08 22:38:57 IST 2014 localhost : enter message
+Tue Apr 08 22:38:57 IST 2014 localhost : enter message
+Tue Apr 08 22:38:58 IST 2014 localhost : enter message
+Tue Apr 08 22:38:59 IST 2014 You : Good to go
+Tue Apr 08 22:39:00 IST 2014 You : enter message
+Tue Apr 08 22:39:00 IST 2014 You : enter message
+Tue Apr 08 22:39:00 IST 2014 You : enter message
+Tue Apr 08 22:39:00 IST 2014 You : enter message
+Tue Apr 08 22:39:00 IST 2014 You : enter message
+Tue Apr 08 22:39:01 IST 2014 You : enter message
+Tue Apr 08 22:39:01 IST 2014 You : enter message
+Tue Apr 08 22:39:01 IST 2014 You : enter message
+Tue Apr 08 22:39:01 IST 2014 You : enter message
+Tue Apr 08 22:39:01 IST 2014 You : enter message
+Tue Apr 08 22:39:02 IST 2014 You : enter message
+Tue Apr 08 22:39:02 IST 2014 You : enter message
+Tue Apr 08 22:39:02 IST 2014 You : enter message
+Tue Apr 08 22:39:02 IST 2014 You : enter message
+Tue Apr 08 22:39:04 IST 2014 localhost : enter message
+Tue Apr 08 22:39:04 IST 2014 localhost : enter message
+Tue Apr 08 22:39:04 IST 2014 localhost : enter message
+Tue Apr 08 22:39:05 IST 2014 localhost : enter message
+Tue Apr 08 22:39:05 IST 2014 localhost : enter message
+Tue Apr 08 22:39:05 IST 2014 localhost : enter message
+
+ ----------------- Log Finished ---------------------
+ ----------------- Printing Log ---------------------
+Tue Apr 08 22:39:17 IST 2014 You : FreeForChatCode73t6384
+Tue Apr 08 22:39:23 IST 2014 localhost : ChatAccept
+
+ ----------------- Log Finished ---------------------
+ ----------------- Printing Log ---------------------
+
+ ----------------- Log Finished ---------------------
+ ----------------- Printing Log ---------------------
+Tue Apr 08 23:06:18 IST 2014 You : FreeForChatCode73t6384
+Tue Apr 08 23:06:21 IST 2014 localhost : ChatAccept
+
+ ----------------- Log Finished ---------------------
+ ----------------- Printing Log ---------------------
+
+ ----------------- Log Finished ---------------------

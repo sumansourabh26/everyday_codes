@@ -1,34 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="257" key="DIALOG_WIDTH"/>
-		<item value="400" key="DIALOG_Y_ORIGIN"/>
-		<item value="356" key="DIALOG_HEIGHT"/>
-		<item value="748" key="DIALOG_X_ORIGIN"/>
-		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
-	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item value="true" key="wrap"/>
 		<item value="false" key="isRegEx"/>
+		<item value="Firefox" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
+		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
-		<item value="print" key="selection"/>
 		<list key="findhistory">
+			<item value="firefox"/>
+			<item value="syear"/>
+			<item value="profile"/>
+			<item value="remove"/>
 			<item value="print"/>
-			<item value="joptionpane"/>
-			<item value="figure"/>
-			<item value="JOptionPane"/>
-			<item value="item"/>
-			<item value="static"/>
-			<item value="add"/>
-			<item value="setname"/>
+			<item value="end"/>
+			<item value="e1."/>
+			<item value="e1"/>
 		</list>
 		<list key="replacehistory">
+			<item value="//e1."/>
+			<item value="serverList"/>
+			<item value="client"/>
+			<item value="message"/>
+			<item value="movieCharsGender"/>
 			<item value="getText"/>
 			<item value="effciency"/>
 			<item value="yearbutton"/>
-			<item value="tuna1"/>
 		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="257" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="381" key="DIALOG_HEIGHT"/>
+		<item value="235" key="DIALOG_Y_ORIGIN"/>
+		<item value="844" key="DIALOG_X_ORIGIN"/>
 	</section>
 </section>
