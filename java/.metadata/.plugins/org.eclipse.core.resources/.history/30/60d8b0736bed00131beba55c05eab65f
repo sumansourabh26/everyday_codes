@@ -12,7 +12,7 @@ public class MainClass extends OpcodeStackDetector  {
 	
 	private BugReporter bugReporter;
 	private boolean intentFound;
-	//private boolean setActionFound;
+	private boolean setActionFound;
 	boolean DEBUG = true;
 	public MainClass(BugReporter bugReporter) {
 		this.bugReporter = bugReporter;
@@ -20,7 +20,7 @@ public class MainClass extends OpcodeStackDetector  {
 	
 	public void visit(Method obj) {
 		intentFound = false;
-		//setActionFound = false;
+		setActionFound = false;
 	}
 	
 	@Override
@@ -41,28 +41,29 @@ public class MainClass extends OpcodeStackDetector  {
 					}
 					else if (calledMethodSig.equals("(Ljava/lang/String;)V") || calledMethodSig.equals("(Ljava/lang/String;Landroid/net/Uri;)V") ) {
 						intentFound=true;
-						//setActionFound= true;
+						setActionFound= true;
 					}				
 				}
 				
-//				if(seen == INVOKEVIRTUAL && intentFound &&
-//						calledClassName.equals("android/content/Intent")&&
-//						calledMethodName.equals("setAction")&&
-//						calledMethodSig.equals("(Ljava/lang/String;)Landroid/content/Intent;")) {
-//					setActionFound = true;
-//					if(DEBUG){
-//						System.out.println("setAction found");
-//					}
-//					
-//				}
+				if(seen == INVOKEVIRTUAL && intentFound &&
+						calledClassName.equals("android/content/Intent")&&
+						calledMethodName.equals("setAction")&&
+						calledMethodSig.equals("(Ljava/lang/String;)Landroid/content/Intent;")) {
+					setActionFound = true;
+					if(DEBUG){
+						System.out.println("setAction found");
+					}
+					
+				}
 				
-				if((seen == INVOKEVIRTUAL &&
-						((calledMethodName.equals("sendStickyBroadcast"))&& calledMethodSig.equals("(Landroid/content/Intent;)V"))&&
-						intentFound)){
+				if(seen == INVOKEVIRTUAL &&
+						((calledMethodName.equals("startActivity")|| calledMethodName.equals("sendBroadcast"))&& calledMethodSig.equals("(Landroid/content/Intent;)V"))||
+						(calledMethodName.equals("startService") && calledMethodSig.equals("(Landroid/content/Intent;)Landroid/content/ComponentName;"))&&
+						setActionFound) {
 					if(DEBUG){
 						System.out.println("without unauthorized intent found");
 					}
-					bugReporter.reportBug(new BugInstance(this, "WSB_STICKY_BROADCAST", Priorities.HIGH_PRIORITY)
+					bugReporter.reportBug(new BugInstance(this, "WUIR_UNAUTHORIZED_INTENT_RECEIPT", Priorities.HIGH_PRIORITY)
 	                .addClassAndMethod(this).addSourceLine(this));
 				}
 			}

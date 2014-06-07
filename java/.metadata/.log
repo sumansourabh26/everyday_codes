@@ -5061,3 +5061,16 @@ java.io.IOException: Unable to resolve plug-in "platform:/plugin/org.python.pyde
 
 !ENTRY org.eclipse.libra.facet 4 0 2014-06-05 12:22:31.927
 !MESSAGE startup class must implement org.eclipse.ui.IStartup
+!SESSION 2014-06-06 12:51:08.785 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -data /home/suman/Dropbox/everyday_codes/java -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.ui 4 4 2014-06-06 12:51:45.380
+!MESSAGE Bad extension specification
+
+!ENTRY org.eclipse.libra.facet 4 0 2014-06-06 12:51:45.462
+!MESSAGE startup class must implement org.eclipse.ui.IStartup

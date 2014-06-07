@@ -56,13 +56,13 @@ public class MainClass extends OpcodeStackDetector  {
 //					
 //				}
 				
-				if((seen == INVOKEVIRTUAL &&
+				if(seen == INVOKEVIRTUAL &&
 						((calledMethodName.equals("sendStickyBroadcast"))&& calledMethodSig.equals("(Landroid/content/Intent;)V"))&&
-						intentFound)){
+						intentFound) {
 					if(DEBUG){
 						System.out.println("without unauthorized intent found");
 					}
-					bugReporter.reportBug(new BugInstance(this, "WSB_STICKY_BROADCAST", Priorities.HIGH_PRIORITY)
+					bugReporter.reportBug(new BugInstance(this, "WUIR_UNAUTHORIZED_INTENT_RECEIPT", Priorities.HIGH_PRIORITY)
 	                .addClassAndMethod(this).addSourceLine(this));
 				}
 			}
