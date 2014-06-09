@@ -12,6 +12,7 @@ public class MainClass extends OpcodeStackDetector  {
 	
 	private BugReporter bugReporter;
 	private boolean intentFound;
+	//private boolean setActionFound;
 	boolean DEBUG = true;
 	public MainClass(BugReporter bugReporter) {
 		this.bugReporter = bugReporter;
@@ -19,6 +20,7 @@ public class MainClass extends OpcodeStackDetector  {
 	
 	public void visit(Method obj) {
 		intentFound = false;
+		//setActionFound = false;
 	}
 	
 	@Override
@@ -42,6 +44,17 @@ public class MainClass extends OpcodeStackDetector  {
 						//setActionFound= true;
 					}				
 				}
+				
+//				if(seen == INVOKEVIRTUAL && intentFound &&
+//						calledClassName.equals("android/content/Intent")&&
+//						calledMethodName.equals("setAction")&&
+//						calledMethodSig.equals("(Ljava/lang/String;)Landroid/content/Intent;")) {
+//					setActionFound = true;
+//					if(DEBUG){
+//						System.out.println("setAction found");
+//					}
+//					
+//				}
 				
 				if((seen == INVOKEVIRTUAL &&
 						((calledMethodName.equals("sendStickyBroadcast"))&& calledMethodSig.equals("(Landroid/content/Intent;)V"))&&

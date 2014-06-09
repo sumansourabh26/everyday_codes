@@ -12,6 +12,7 @@ public class MainClass extends OpcodeStackDetector  {
 	
 	private BugReporter bugReporter;
 	private boolean intentFound;
+	//private boolean setActionFound;
 	boolean DEBUG = true;
 	public MainClass(BugReporter bugReporter) {
 		this.bugReporter = bugReporter;
@@ -19,6 +20,7 @@ public class MainClass extends OpcodeStackDetector  {
 	
 	public void visit(Method obj) {
 		intentFound = false;
+		//setActionFound = false;
 	}
 	
 	@Override
