@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+    <Address studentId="1001">
+        <Details name="Sam" age="" sex="M" class="10" />
+    </Address>
+    <Address studentId="1002">
+        <Details name="Krish" age="" sex="M" class="10" />
+    </Address>
+</Root>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<population>
+	<person name = "suman">
+		<friends>
+			<friend name = "rakesh"></friend>
+			<friend name = "manohar"></friend>
+			<friend name = "pragya"></friend>
+		</friends>
+	</person>
+
+	<person name = "rakesh">
+	
+	</person>
+</population>

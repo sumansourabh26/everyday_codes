@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<company name="www.java-connect.com" address="Bangalore" country="INDIA">
+
+      <person>
+
+            <personid>000001</personid>
+
+            <name>Mahendra</name>
+
+            <age>29</age>
+            <personid>42432758932759</personid></person>
+
+      <person>
+
+
+            <personid>000004</personid>
+
+            <name>Rajendra</name>
+
+            <age>34</age>
+
+      </person>
+
+      <person>
+
+            <personid>000007</personid>
+
+            <name>Surendra</name>
+
+            <age>22</age>
+
+      </person>
+
+      <person>
+
+            <personid>000019</personid>
+
+            <name>Manmohan</name>
+
+            <age>31</age>
+
+      </person>
+
+</company>

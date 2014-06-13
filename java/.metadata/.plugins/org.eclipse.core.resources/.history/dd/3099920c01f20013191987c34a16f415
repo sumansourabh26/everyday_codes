@@ -1,0 +1,42 @@
+ import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.io.XMLWriter;
+import java.io.*;
+public class PretechDOM4JCreateXML {
+
+	public static void main(String[] args) {
+
+        //Creating document
+        Document document = DocumentHelper.createDocument();
+     Element order = document.addElement("Order");
+   
+     //Creating element and setting attribute
+     Element orderNumber =  order.addElement("OrderNumber");
+     orderNumber.addAttribute("Number", "1000");
+ 
+     //Creating other elements
+     Element orderItem=orderNumber.addElement("OrderItem");
+     
+     orderItem.setText("Pen Drive");
+     Element orderItemDesc=orderNumber.addElement("OrderItemDescription");
+     orderItemDesc.setText("Trancsend 8 gb Pen Drive");
+    
+     Element orderItemPrice=orderNumber.addElement("OrderItemPrice");
+     orderItemPrice.setText("500");
+     Element orderItemTax=orderNumber.addElement("OrderItemTax");
+     orderItemTax.setText("50");
+     Element orderItemTotal=orderNumber.addElement("OrderItemTotal");
+     orderItemTotal.setText("450");
+     //Writing document contents to xml file
+    try{
+    XMLWriter output = new XMLWriter(
+            new FileWriter( new File("PretechDOM4JXML.xml") ));
+        output.write( document );
+        output.close();
+        System.out.println("Completed");
+        }
+     catch(IOException e){System.out.println(e.getMessage());}
+    }
+
+}

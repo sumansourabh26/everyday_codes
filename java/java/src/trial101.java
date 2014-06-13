@@ -46,10 +46,12 @@ class class101 extends JFrame{
 }
 public class trial101 {
 	public static void main(String[] args) {
-		class101 screen = new class101();
-		screen.setSize(500,500);
-		screen.setVisible(true);
-		screen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		class101 screen = new class101();
+//		screen.setSize(500,500);
+//		screen.setVisible(true);
+//		screen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
 	}
 
 }

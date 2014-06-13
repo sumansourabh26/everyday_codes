@@ -1,0 +1,14 @@
+<? Xml version='1.0' encoding="ISO-8859-1"?>
+<CATALOG>
+<CD>
+<TITLE>Empire B</TITLE>
+<ARTIST>John Dylan</ARTIST>
+<COUNTRY>UK</COUNTRY>
+<COMPANY>XYZ</COMPANY>
+<PRICE>12.75</PRICE>
+<YEAR>1979</YEAR>
+</CD>
+<CD>
+<TITLE>heart Beat</TITLE>
+<ARTIST>Ronnie T</ARTIST>
+<COUNTRY>USA</COUNTRY>

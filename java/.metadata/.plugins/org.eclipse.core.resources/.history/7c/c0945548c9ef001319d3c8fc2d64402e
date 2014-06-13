@@ -1,0 +1,9 @@
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;Root&gt;
+    &lt;Address studentId=&quot;1001&quot;&gt;
+        &lt;Details name=&quot;Sam&quot; age=&quot;&quot; sex=&quot;M&quot; class=&quot;10&quot; /&gt;
+    &lt;/Address&gt;
+    &lt;Address studentId=&quot;1002&quot;&gt;
+        &lt;Details name=&quot;Krish&quot; age=&quot;&quot; sex=&quot;M&quot; class=&quot;10&quot; /&gt;
+    &lt;/Address&gt;
+&lt;/Root&gt;

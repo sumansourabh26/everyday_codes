@@ -1,0 +1,30 @@
+import java.util.List;
+ 
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Node;
+import org.dom4j.io.SAXReader;
+import org.dom4j.*;
+ 
+public class XMLReadExample {
+    //@SuppressWarnings("unchecked")
+    public static void main(String[] args) throws DocumentException {
+
+        SAXReader reader = new SAXReader();
+
+        Document document = reader.read("/home/suman/Desktop/com.instagram.android/AndroidManifest.xml");
+     
+        List<Node> nodes = document.selectNodes("/manifest/application/receiver");
+        if (nodes.isEmpty()) {
+			System.out.println("no receiver found");
+		} else {
+			for (Node node : nodes) {
+				
+	    		System.out.println("android name:"+node.valueOf("@android:name"));        	
+	         	
+	        	
+	        }
+		}
+        
+    }
+}

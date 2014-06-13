@@ -1,0 +1,47 @@
+import java.util.List;
+ 
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Node;
+import org.dom4j.io.SAXReader;
+import org.dom4j.*;
+ 
+public class XMLReadExample {
+    //@SuppressWarnings("unchecked")
+    public static void main(String[] args) throws DocumentException {
+
+        SAXReader reader = new SAXReader();
+
+        Document document = reader.read("/home/suman/Desktop/com.instagram.android/AndroidManifest.xml");
+     
+        List<Node> nodes = document.selectNodes("/manifest/application/receiver");
+        if (nodes.isEmpty()) {
+			System.out.println("no receiver found");
+		} else {
+			for (Node node : nodes) {
+				
+	    		System.out.println("reveiver name:"+node.valueOf("@android:name"));
+	    		if(node.valueOf("@android:exported").equals("false")) {
+	    			System.out.println("this receiver is private");
+	    		}
+	    		else if (node.valueOf("@android:exported").equals("true")) {
+	    			if(!node.valueOf("@android:permission").isEmpty()) {
+	    				System.out.println("this reciever public is public and protected by permission");	
+	    			}
+	    			else {
+						System.out.println("this reciever is public and not protected");
+					}
+				}
+	    		else {
+					if(!node.selectNodes("intent-filer").isEmpty() && 
+							node.valueOf("@android:permission").isEmpty()) {
+						System.out.println("the reciever is public and not protected");
+					}
+				}	
+	         	
+	        	
+	        }
+		}
+        
+    }
+}

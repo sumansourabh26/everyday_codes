@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<population>
+	<person name = "suman">
+		<friends>
+			<friend name = "rakesh" age = "18"></friend>
+			<friend name = "manohar" age = "19"></friend>
+			<friend name = "pragya" age = "20"></friend>
+		</friends>
+		<lived>
+			<place name="mumbai" from="2012" to="now"></place>
+			<place name ="itarsi" from="2000" to="2010"></place>
+			<place name = "bhopal" from ="2010" to="2012"></place>
+		</lived>
+	</person>
+
+	<person name = "rakesh">
+		<friends>
+			<friend name = "rakesh" age = "18"></friend>
+			<friend name = "manohar" age = "19"></friend>
+			<friend name = "pragya" age = "20"></friend>
+		</friends>
+		<lived>
+			<place name = "orissa"></place>
+			<place name = "mumbai" from = "20000" to="29482904"></place>
+		</lived>
+		
+	</person>
+</population>

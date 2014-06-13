@@ -1,0 +1,35 @@
+import java.util.List;
+ 
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Node;
+import org.dom4j.io.SAXReader;
+import org.dom4j.*;
+ 
+public class XMLReadExample {
+    //@SuppressWarnings("unchecked")
+    public static void main(String[] args) throws DocumentException {
+        // Get the SAXReader object
+        SAXReader reader = new SAXReader();
+        // Get the xml document object by sax reader.
+        Document document = reader.read("/home/suman/Desktop/com.instagram.android/AndroidManifest.xml");
+        // Define the xpath
+        
+        String xpathExpression = "/manifest/application";
+        // Get the list of nodes on given xPath
+        List<Node> nodes = document.selectNodes(xpathExpression);
+        // Read all the node inside xpath nodes and print the value of each
+        for (Node node : nodes) {
+            System.out.println("permission name : " + node.getName());
+        }
+        
+        
+        
+        String exp1 = "//manifest";
+        List<Node> nodes1 = document.selectNodes(exp1);
+        
+        for (Node node : nodes1) {
+        	System.out.println("name:"+ node.valueOf("@package") );
+		}
+    }
+}
