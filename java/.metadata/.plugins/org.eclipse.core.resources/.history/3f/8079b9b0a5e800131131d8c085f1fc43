@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<FindbugsPlugin>
-  <Detector class="fbUnauthorizedIntentReceipt.MainClass" speed="fast" />
-
-  <BugPattern abbrev="WUI" type="WUIR_UNAUTHORIZED_INTENT_RECEIPT" category="SECURITY" />
-</FindbugsPlugin>

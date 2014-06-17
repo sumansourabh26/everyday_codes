@@ -8,6 +8,7 @@
 		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="test"/>
 			<item value="kuch"/>
 			<item value="setactio"/>
 			<item value="firefox"/>
@@ -15,7 +16,6 @@
 			<item value="profile"/>
 			<item value="remove"/>
 			<item value="print"/>
-			<item value="end"/>
 		</list>
 		<list key="replacehistory">
 			<item value="//e1."/>

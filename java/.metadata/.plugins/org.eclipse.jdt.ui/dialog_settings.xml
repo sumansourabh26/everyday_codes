@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item value="JavaSE-1.7" key="org.eclipse.jdt.ui.last.selected.execution.enviroment"/>
-	<item value="C:\Users\suman\Desktop" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="/home/suman/Desktop/Apptesting/libs_for_xml" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="jre1.7.0_45" key="org.eclipse.jdt.ui.last.selected.project.jre"/>
 	<item value="2" key="org.eclipse.jdt.ui.last.selected.jre.kind2"/>
 	<section name="org.eclipse.jdt.internal.ui.dialogs.FilteredTypesSelectionDialog">

@@ -1,0 +1,35 @@
+<project name="fbUnauthorizedIntentReceipt" default="dist" basedir=".">
+    <description>
+        simple example build file
+    </description>
+<property name="Root.dir" value="/home/rakesh/bin/Wegilant"></property>
+<property name="FindBugs.home" value="${Root.dir}/findbugs-2.0.3"></property>
+<property name="Plugin.name" value="fbUnauthorizedIntentReceipt"></property>
+<target name="dist" depends="build">
+	<jar destfile="${FindBugs.home}/myPlugins/${Plugin.name}.jar">
+	   <fileset dir="bin"/>
+		<zipfileset dir="etc" includes="*.xml" prefix=""></zipfileset>
+	</jar>
+</target>
+
+<path id="classpath">
+        <fileset dir="lib" includes="**/*.jar"/>
+</path>
+<target name="build">
+	<javac srcdir="src" destdir="bin" classpathref="classpath" includeantruntime="false" />
+</target>
+		<property name="testxmldir" value="testxmls"/>
+		<property name="buggyjar" value="${Root.dir}/Buggy-projects/UnauthorizedIntentReceipt/bin/classes/com/example/myfirstapp/MainActivity.class"/>
+		<target name="execute.findbug" depends="dist">
+			<mkdir dir="${testxmldir}"/>
+			<buildnumber/>
+			<java jar="${FindBugs.home}/lib/findbugs.jar" fork="true">
+				<arg value="-pluginList"/>
+				<arg value="${FindBugs.home}/myPlugins/${Plugin.name}.jar"/>
+				<arg value="-xml"/>
+				<arg value="-output"/>	
+				<arg value="${testxmldir}/test${build.number}.xml"/>
+				<arg value="${buggyjar}"/>
+			</java>
+		</target>
+</project>

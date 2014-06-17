@@ -1,0 +1,28 @@
+package com.sumansourabh26.thenewboston;
+
+import android.R.integer;
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class StartingPoint extends Activity {
+
+	int counter ;
+	Button addButton, subtractButton;
+	TextView displayTextView;
+	
+	@Override	
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_starting_point);
+		counter = 0;
+		addButton = (Button) findViewById(R.id.addButton);
+		subtractButton = (Button) findViewById(R.id.subtractButton);
+		
+		
+		
+	}
+}

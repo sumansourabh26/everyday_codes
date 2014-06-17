@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/home/suman/Desktop/dom4j-1.6.1/dom4j-1.6.1.jar"/>
-	<classpathentry kind="lib" path="/home/suman/Desktop/jaxen-1.1.6/jaxen-1.1.6.jar"/>
+	<classpathentry kind="lib" path="/home/suman/Dropbox/Wegilant/xmlDetectors/libs_for_xml/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/home/suman/Dropbox/Wegilant/xmlDetectors/libs_for_xml/jaxen-1.1.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
