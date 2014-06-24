@@ -40,10 +40,10 @@
 		<item value="800" key="ListSashWeight"/>
 	</section>
 	<section name="org.eclipse.equinox.internal.p2.ui.dialogs.InstallWizard.WizardSettings">
-		<item value="1197" key="DIALOG_WIDTH"/>
+		<item value="951" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
-		<item value="747" key="DIALOG_HEIGHT"/>
-		<item value="-24" key="DIALOG_Y_ORIGIN"/>
-		<item value="124" key="DIALOG_X_ORIGIN"/>
+		<item value="632" key="DIALOG_HEIGHT"/>
+		<item value="75" key="DIALOG_Y_ORIGIN"/>
+		<item value="199" key="DIALOG_X_ORIGIN"/>
 	</section>
 </section>

@@ -8740,3 +8740,104 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp
 
 !ENTRY org.eclipse.libra.facet 4 0 2014-06-17 19:55:22.524
 !MESSAGE startup class must implement org.eclipse.ui.IStartup
+!SESSION 2014-06-18 15:43:01.832 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.ui 4 4 2014-06-18 15:43:38.902
+!MESSAGE Bad extension specification
+
+!ENTRY org.eclipse.libra.facet 4 0 2014-06-18 15:43:38.934
+!MESSAGE startup class must implement org.eclipse.ui.IStartup
+!SESSION 2014-06-18 22:09:20.978 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.ui 4 4 2014-06-18 22:09:57.983
+!MESSAGE Bad extension specification
+
+!ENTRY org.eclipse.libra.facet 4 0 2014-06-18 22:09:58.016
+!MESSAGE startup class must implement org.eclipse.ui.IStartup
+!SESSION 2014-06-18 22:14:48.417 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.ui 4 4 2014-06-18 22:15:09.763
+!MESSAGE Bad extension specification
+
+!ENTRY org.eclipse.libra.facet 4 0 2014-06-18 22:15:09.775
+!MESSAGE startup class must implement org.eclipse.ui.IStartup
+!SESSION 2014-06-19 16:10:14.045 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.ui 4 4 2014-06-19 16:10:51.967
+!MESSAGE Bad extension specification
+
+!ENTRY org.eclipse.libra.facet 4 0 2014-06-19 16:10:52.014
+!MESSAGE startup class must implement org.eclipse.ui.IStartup
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2014-06-19 16:14:22.947
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2014-06-19 16:14:22.947
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-06-19 16:14:22.947
+!MESSAGE Software being installed: PHP Development Tools (PDT) Mylyn Integration 3.2.0.201306051924 (org.eclipse.php.mylyn.feature.group 3.2.0.201306051924)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-06-19 16:14:22.947
+!MESSAGE Missing requirement: PHP Development Tools (PDT) Mylyn Integration 3.2.0.201306051924 (org.eclipse.php.mylyn.feature.group 3.2.0.201306051924) requires 'org.eclipse.dltk.mylyn.feature.group 0.0.0' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2014-06-19 16:14:22.997
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2014-06-19 16:14:22.997
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-06-19 16:14:22.998
+!MESSAGE Software being installed: PHP Development Tools (PDT) Mylyn Integration 3.2.0.201306051924 (org.eclipse.php.mylyn.feature.group 3.2.0.201306051924)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-06-19 16:14:22.998
+!MESSAGE Missing requirement: PHP Development Tools (PDT) Mylyn Integration 3.2.0.201306051924 (org.eclipse.php.mylyn.feature.group 3.2.0.201306051924) requires 'org.eclipse.dltk.mylyn.feature.group 0.0.0' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2014-06-19 16:14:23.036
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2014-06-19 16:14:23.036
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-06-19 16:14:23.036
+!MESSAGE Software being installed: PHP Development Tools (PDT) Mylyn Integration 3.2.0.201306051924 (org.eclipse.php.mylyn.feature.group 3.2.0.201306051924)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-06-19 16:14:23.036
+!MESSAGE Missing requirement: PHP Development Tools (PDT) Mylyn Integration 3.2.0.201306051924 (org.eclipse.php.mylyn.feature.group 3.2.0.201306051924) requires 'org.eclipse.dltk.mylyn.feature.group 0.0.0' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2014-06-19 16:14:23.037
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2014-06-19 16:14:23.037
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-06-19 16:14:23.037
+!MESSAGE Software being installed: PHP Development Tools (PDT) Mylyn Integration 3.2.0.201306051924 (org.eclipse.php.mylyn.feature.group 3.2.0.201306051924)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-06-19 16:14:23.037
+!MESSAGE Missing requirement: PHP Development Tools (PDT) Mylyn Integration 3.2.0.201306051924 (org.eclipse.php.mylyn.feature.group 3.2.0.201306051924) requires 'org.eclipse.dltk.mylyn.feature.group 0.0.0' but it could not be found
+!SESSION 2014-06-19 18:50:32.850 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.ui 4 4 2014-06-19 18:51:15.405
+!MESSAGE Bad extension specification
+
+!ENTRY org.eclipse.libra.facet 4 0 2014-06-19 18:51:15.441
+!MESSAGE startup class must implement org.eclipse.ui.IStartup

@@ -1,8 +1,0 @@
-INDEX VERSION 1.126+/home/suman/Dropbox/everyday_codes/android/.metadata/.plugins/org.eclipse.jdt.core
-3852805797.index
-1221363265.index
-252658543.index
-3440925369.index
-1270315800.index
-1674494458.index
-1246358060.index
