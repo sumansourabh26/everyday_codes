@@ -1,0 +1,4 @@
+<?php
+$file_orig = "ritu.jpg";
+echo $file = rand(1, 1000).md5_file($file_orig)." ".rand(1, 1000); 
+?>

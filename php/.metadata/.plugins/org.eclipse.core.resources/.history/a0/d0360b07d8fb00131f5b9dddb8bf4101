@@ -1,0 +1,11 @@
+<?php
+$file_orig = "ritu.jpg";
+echo $file = rand(1, 1000).md5_file($file_orig)." ".rand(1, 1000);
+
+if(file_exists($file_orig)){
+	echo "file exist\n";
+	unlink($file_orig);
+	echo "file deleted\n";
+	
+}
+?>
