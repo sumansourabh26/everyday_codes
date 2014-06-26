@@ -43,4 +43,5 @@
 			mail($email, $mail_sub, $mail_body, $msgHeaders);
 		}
 	}
+
 ?>
