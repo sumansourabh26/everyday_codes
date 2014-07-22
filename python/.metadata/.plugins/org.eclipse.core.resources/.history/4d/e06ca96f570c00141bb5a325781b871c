@@ -1,0 +1,21 @@
+b = range(0,6,2);
+print(b);
+
+a = ["its me", "not me", "ghanta"];
+a = a + ["kuch bhi"];
+
+print(a);
+
+def f(a, L=[]):
+	L.append(a);
+	return L;
+
+print(f(1));
+print(f(2));
+print(f(3));
+print(f(4));
+
+def g(a, L = None):
+	if(L is None):
+		L = [];
+	L.append(a);

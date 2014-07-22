@@ -1,0 +1,6 @@
+character = {"ritu":"seedhi saadi", "shreya":"forward", "pragya":"giveUp and arrogant"};
+for name, char in character.items():
+	print(name + " is "+ char);
+
+for name in character.itervalues()
+	print(name)

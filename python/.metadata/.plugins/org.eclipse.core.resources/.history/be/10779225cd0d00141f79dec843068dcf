@@ -1,0 +1,8 @@
+
+telephone = {"mummy":8109351416, "suman": 9967440124 };
+
+#print(telephone["randomGuy"]) KeyError: 'randomGuy'
+
+print(telephone.has_key("mummy"))
+print(telephone.has_key("randomGuy"))
+print(list(telephone.keys()))

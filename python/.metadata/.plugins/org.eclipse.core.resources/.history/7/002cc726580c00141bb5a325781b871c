@@ -1,0 +1,35 @@
+b = range(0,6,2);
+print(b);
+
+a = ["its me", "not me", "ghanta"];
+a = a + ["kuch bhi"];
+
+print(a);
+
+def f(a, L=[]):
+	L.append(a);
+	return L;
+
+print(f(1));
+print(f(2));
+print(f(3));
+print(f(4));
+
+def g(a, L = None):
+	if(L is None):
+		L = [];
+	L.append(a);
+	return(L);
+
+print(g(1));
+print(g(2));
+print(g(3));
+print(g(4));
+
+
+def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):
+	print("-- This parrot wouldn’t", action, end=' ');
+	print("if you put", voltage, "volts through it.");
+	print("-- Lovely plumage, the", type);
+	print("-- It’s", state, "!");
+

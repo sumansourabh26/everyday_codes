@@ -1,0 +1,55 @@
+-- VERSION_4
+-- START DISKCACHE
+/home/suman/bin/everyday_codes/python/.metadata/.plugins/org.eclipse.core.resources/.projects/tutorial/com.python.pydev.analysis/v2_indexcache
+settings|1405369486000|/home/suman/bin/everyday_codes/python/tutorial/tutorial/settings.py
+pipelines|1405369452000|/home/suman/bin/everyday_codes/python/tutorial/tutorial/pipelines.py
+sets|1405613023000|/home/suman/bin/everyday_codes/python/tutorial/sets.py
+lists|1405611228000|/home/suman/bin/everyday_codes/python/tutorial/lists.py
+tuple_and_sequence|1405616785000|/home/suman/bin/everyday_codes/python/tutorial/tuple_and_sequence.py
+__init__|1405369468000|/home/suman/bin/everyday_codes/python/tutorial/tutorial/__init__.py
+items|1405369417000|/home/suman/bin/everyday_codes/python/tutorial/tutorial/items.py
+spiders.__init__|1405369532000|/home/suman/bin/everyday_codes/python/tutorial/tutorial/spiders/__init__.py
+dictionaries|1405615964000|/home/suman/bin/everyday_codes/python/tutorial/dictionaries.py
+-- END DISKCACHE
+-- START DICTIONARY
+4
+2=sets
+3=lists
+4=tuple_and_sequence
+1=dictionaries
+-- END DICTIONARY
+-- START TREE 1
+29
+a|4|a!11@a!19@a!27@a!35@
+alp|0|
+arr|1|array1!27@
+b|4|b!19@b!35@b!27@b!11@
+bas|1|basket!19@
+c|2|c!19@c!27@
+cha|0|
+cub|1|cube!27@
+d|1|d!19@
+e|2|e!19@e!27@
+emp|1|empty!35@
+f|1|f!26@
+fir|0|
+g|1|g!26@
+l|1|l!27@
+mat|0|
+nam|0|
+num|0|
+pai|0|
+par|1|parrot!26@
+que|1|queue!27@
+res|2|result!27@result2!27@
+sec|0|
+squ|1|square!27@
+sum|1|suman!11@
+t|1|t!35@
+tel|1|telephone!11@
+tem|3|temp!11@temp!35@temp!27@
+thi|0|
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

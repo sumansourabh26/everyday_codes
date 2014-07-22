@@ -1,0 +1,2 @@
+a = ["zero","one","two"];
+b = enumerate(a);

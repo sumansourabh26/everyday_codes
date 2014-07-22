@@ -1,0 +1,13 @@
+x = int(input("Please enter an integer: "));
+
+if(x < 0):
+	print( "is negative");
+elif(x == 0):
+	print( "is zero");
+else:
+	print( "is +ve");
+	
+
+x = range(0,6,2);
+print(x);
+	
