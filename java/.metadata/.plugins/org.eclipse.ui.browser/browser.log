@@ -1,0 +1,79 @@
+
+Oct 18, 2014 22:57:18.36 NEW SESSION
+Oct 18, 2014 22:57:18.36 
+Oct 18, 2014 22:57:18.36 (process:21035): GLib-CRITICAL **: g_slice_set_config: assertion 'sys_page_size == 0' failed
+Oct 18, 2014 23:14:07.74 
+Oct 18, 2014 23:14:07.74 (process:22114): GLib-CRITICAL **: g_slice_set_config: assertion 'sys_page_size == 0' failed
+Oct 18, 2014 23:16:55.81 
+Oct 18, 2014 23:16:55.82 (process:22289): GLib-CRITICAL **: g_slice_set_config: assertion 'sys_page_size == 0' failed
+Oct 18, 2014 23:33:10.18 
+Oct 18, 2014 23:33:10.21 (process:23166): GLib-CRITICAL **: g_slice_set_config: assertion 'sys_page_size == 0' failed
+Oct 18, 2014 23:34:40.48 
+Oct 18, 2014 23:34:40.48 (process:23252): GLib-CRITICAL **: g_slice_set_config: assertion 'sys_page_size == 0' failed
+
+Oct 19, 2014 24:52:39.92 NEW SESSION
+Oct 19, 2014 24:52:39.92 
+Oct 19, 2014 24:52:39.92 (process:3499): GLib-CRITICAL **: g_slice_set_config: assertion 'sys_page_size == 0' failed
+Oct 19, 2014 24:52:39.93 Error: No running window found
+Oct 19, 2014 24:52:39.96 
+Oct 19, 2014 24:52:39.96 (process:3506): GLib-CRITICAL **: g_slice_set_config: assertion 'sys_page_size == 0' failed
+Oct 19, 2014 24:52:40.03 
+Oct 19, 2014 24:52:40.03 (firefox:3506): GLib-GObject-WARNING **: Attempt to add property GnomeProgram::sm-connect after class was initialised
+Oct 19, 2014 24:52:40.03 
+Oct 19, 2014 24:52:40.03 (firefox:3506): GLib-GObject-WARNING **: Attempt to add property GnomeProgram::show-crash-dialog after class was initialised
+Oct 19, 2014 24:52:40.03 
+Oct 19, 2014 24:52:40.03 (firefox:3506): GLib-GObject-WARNING **: Attempt to add property GnomeProgram::display after class was initialised
+Oct 19, 2014 24:52:40.03 
+Oct 19, 2014 24:52:40.03 (firefox:3506): GLib-GObject-WARNING **: Attempt to add property GnomeProgram::default-icon after class was initialised
+Oct 19, 2014 24:52:40.61 1413660160610	addons.xpi	WARN	Exception running bootstrap method startup on firebug@software.joehewitt.com: TypeError: scope.gcli.addCommand is not a function (resource://firebug/gcli.js:126:4) JS Stack trace: addCommand@gcli.js:126:5 < registerCommands@gcli.js:132:1 < FirebugGCLICommands.startup@gcli.js:45:9 < startup@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///home/suman/.mozilla/firefox/pdbc7yca.default/extensions/firebug@bootstrap.js:78:5 < XPI_callBootstrapMethod@XPIProvider.jsm:4303:9 < XPI_startup@XPIProvider.jsm:1966:13 < AMI_callProviders@AddonManager.jsm:875:11 < AMI_startup@AddonManager.jsm:750:1 < AMP_startup@AddonManager.jsm:2322:5 < AMC_observe@addonManager.js:55:7
+Oct 19, 2014 24:53:42.60 1413660222609	GMPInstallManager.simpleCheckAndInstall	INFO	Last check was: 98319 seconds ago, minimum seconds: 86400
+Oct 19, 2014 24:53:42.61 1413660222610	GMPInstallManager._getURL	INFO	Using url: https://aus4.mozilla.org/update/3/GMP/%VERSION%/%BUILD_ID%/%BUILD_TARGET%/%LOCALE%/%CHANNEL%/%OS_VERSION%/%DISTRIBUTION%/%DISTRIBUTION_VERSION%/update.xml
+Oct 19, 2014 24:53:42.61 1413660222616	GMPInstallManager._getURL	INFO	Using url (with replacement): https://aus4.mozilla.org/update/3/GMP/33.0/20141013200257/Linux_x86_64-gcc3/en-US/release/Linux%203.13.0-38-generic%20(GTK%202.24.23)/canonical/1.0/update.xml
+Oct 19, 2014 24:53:42.61 1413660222618	GMPInstallManager.checkForAddons	INFO	sending request to: https://aus4.mozilla.org/update/3/GMP/33.0/20141013200257/Linux_x86_64-gcc3/en-US/release/Linux%203.13.0-38-generic%20(GTK%202.24.23)/canonical/1.0/update.xml
+Oct 19, 2014 24:55:21.11 1413660321111	addons.repository	WARN	Search failed when repopulating cache
+Oct 19, 2014 24:55:21.20 1413660321209	GMPInstallManager._getURL	INFO	Using url: https://aus4.mozilla.org/update/3/GMP/%VERSION%/%BUILD_ID%/%BUILD_TARGET%/%LOCALE%/%CHANNEL%/%OS_VERSION%/%DISTRIBUTION%/%DISTRIBUTION_VERSION%/update.xml
+Oct 19, 2014 24:55:21.21 1413660321210	GMPInstallManager._getURL	INFO	Using url (with replacement): https://aus4.mozilla.org/update/3/GMP/33.0/20141013200257/Linux_x86_64-gcc3/en-US/release/Linux%203.13.0-38-generic%20(GTK%202.24.23)/canonical/1.0/update.xml
+Oct 19, 2014 24:55:21.21 1413660321210	GMPInstallManager.checkForAddons	INFO	sending request to: https://aus4.mozilla.org/update/3/GMP/33.0/20141013200257/Linux_x86_64-gcc3/en-US/release/Linux%203.13.0-38-generic%20(GTK%202.24.23)/canonical/1.0/update.xml
+Oct 19, 2014 24:55:22.86 1413660322863	GMPInstallManager._getChannelStatus	INFO	request.status is: 0
+Oct 19, 2014 24:55:22.86 1413660322863	GMPInstallManager.onErrorXML	WARN	request.status: 2152398878
+Oct 19, 2014 24:55:22.86 1413660322863	FirefoxAccounts	ERROR	error POSTing /certificate/sign: {"error":{},"message":null,"code":null,"errno":null}
+Oct 19, 2014 24:55:22.86 1413660322864	GMPInstallManager.simpleCheckAndInstall	ERROR	Could not check for addons
+Oct 19, 2014 24:55:22.86 1413660322865	FirefoxAccounts	ERROR	HAWK.signCertificate error: {"error":{},"message":null,"code":null,"errno":null}
+Oct 19, 2014 24:55:22.86 1413660322866	Sync.BrowserIDManager	ERROR	Non-authentication error in _fetchTokenForUser: null
+Oct 19, 2014 24:55:22.87 1413660322872	Sync.BrowserIDManager	ERROR	Background fetch for key bundle failed: [object Object]
+Oct 19, 2014 24:55:22.87 1413660322872	Sync.BrowserIDManager	ERROR	Could not authenticate: [object Object]
+Oct 19, 2014 24:56:01.25 1413660361250	addons.update-checker	WARN	HTTP Request failed for an unknown reason
+Oct 19, 2014 24:56:01.25 1413660361253	addons.update-checker	WARN	HTTP Request failed for an unknown reason
+Oct 19, 2014 24:56:01.25 1413660361254	addons.update-checker	WARN	HTTP Request failed for an unknown reason
+Oct 19, 2014 24:56:02.88 1413660362880	GMPInstallManager._getChannelStatus	INFO	request.status is: 0
+Oct 19, 2014 24:56:02.88 1413660362881	GMPInstallManager.onErrorXML	WARN	request.status: 2152398878
+Oct 19, 2014 24:56:21.15 1413660381154	addons.update-checker	WARN	Request for https://versioncheck-bg.addons.mozilla.org/update/VersionCheck.php?reqVersion=2&id=online-accounts@lists.launchpad.net&version=0.5&maxAppVersion=15.*&status=userEnabled&appID={ec8030f7-c20a-464f-9b0e-13a3a9e97384}&appVersion=33.0&appOS=Linux&appABI=x86_64-gcc3&locale=en-IN&currentAppVersion=33.0&updateType=112&compatMode=normal timed out
+Oct 19, 2014 24:56:21.15 1413660381157	addons.update-checker	WARN	Request for https://versioncheck-bg.addons.mozilla.org/update/VersionCheck.php?reqVersion=2&id=jid1-ASMu9YBkP688TA@jetpack&version=0.2.1&maxAppVersion=33.*&status=userEnabled&appID={ec8030f7-c20a-464f-9b0e-13a3a9e97384}&appVersion=33.0&appOS=Linux&appABI=x86_64-gcc3&locale=en-IN&currentAppVersion=33.0&updateType=112&compatMode=normal timed out
+Oct 19, 2014 24:56:21.16 1413660381161	addons.update-checker	WARN	Request for https://versioncheck-bg.addons.mozilla.org/update/VersionCheck.php?reqVersion=2&id=ubufox@ubuntu.com&version=2.9&maxAppVersion=19.0a1&status=userDisabled&appID={ec8030f7-c20a-464f-9b0e-13a3a9e97384}&appVersion=33.0&appOS=Linux&appABI=x86_64-gcc3&locale=en-IN&currentAppVersion=33.0&updateType=112&compatMode=normal timed out
+Oct 19, 2014 24:56:21.16 1413660381164	addons.update-checker	WARN	Request for https://versioncheck-bg.addons.mozilla.org/update/VersionCheck.php?reqVersion=2&id=googledictionary@toptip.ca&version=7.1&maxAppVersion=33.*&status=userEnabled&appID={ec8030f7-c20a-464f-9b0e-13a3a9e97384}&appVersion=33.0&appOS=Linux&appABI=x86_64-gcc3&locale=en-IN&currentAppVersion=33.0&updateType=112&compatMode=normal timed out
+Oct 19, 2014 24:56:21.16 1413660381168	addons.update-checker	WARN	Request for https://versioncheck-bg.addons.mozilla.org/update/VersionCheck.php?reqVersion=2&id={9c51bd27-6ed8-4000-a2bf-36cb95c0c947}&version=11.0.1&maxAppVersion=16.*&status=userEnabled&appID={ec8030f7-c20a-464f-9b0e-13a3a9e97384}&appVersion=33.0&appOS=Linux&appABI=x86_64-gcc3&locale=en-IN&currentAppVersion=33.0&updateType=112&compatMode=normal timed out
+Oct 19, 2014 24:56:21.17 1413660381174	addons.update-checker	WARN	Request for https://versioncheck-bg.addons.mozilla.org/update/VersionCheck.php?reqVersion=2&id={2e1445b0-2682-11e1-bfc2-0800200c9a66}&version=2014.08.06.beta&maxAppVersion=17.*&status=userEnabled&appID={ec8030f7-c20a-464f-9b0e-13a3a9e97384}&appVersion=33.0&appOS=Linux&appABI=x86_64-gcc3&locale=en-IN&currentAppVersion=33.0&updateType=112&compatMode=normal timed out
+Oct 19, 2014 24:56:21.17 1413660381179	addons.update-checker	WARN	Request for https://versioncheck-bg.addons.mozilla.org/update/VersionCheck.php?reqVersion=2&id={73007fef-a6e0-47d3-b4e7-dfc116ed6f65}&version=1.14&maxAppVersion=33.*&status=userEnabled&appID={ec8030f7-c20a-464f-9b0e-13a3a9e97384}&appVersion=33.0&appOS=Linux&appABI=x86_64-gcc3&locale=en-IN&currentAppVersion=33.0&updateType=112&compatMode=normal timed out
+Oct 19, 2014 24:56:21.18 1413660381185	addons.update-checker	WARN	Request for https://versioncheck-bg.addons.mozilla.org/update/VersionCheck.php?reqVersion=2&id=firebug@software.joehewitt.com&version=2.0.4&maxAppVersion=35.0&status=userEnabled&appID={ec8030f7-c20a-464f-9b0e-13a3a9e97384}&appVersion=33.0&appOS=Linux&appABI=x86_64-gcc3&locale=en-IN&currentAppVersion=33.0&updateType=112&compatMode=normal timed out
+Oct 19, 2014 24:56:21.19 1413660381190	addons.update-checker	WARN	Request for https://versioncheck-bg.addons.mozilla.org/update/VersionCheck.php?reqVersion=2&id=jid1-sqmEAwSoa3FZPc@jetpack&version=0.1.4.1&maxAppVersion=35.0&status=userEnabled&appID={ec8030f7-c20a-464f-9b0e-13a3a9e97384}&appVersion=33.0&appOS=Linux&appABI=x86_64-gcc3&locale=en-IN&currentAppVersion=33.0&updateType=112&compatMode=normal timed out
+Oct 19, 2014 24:56:21.19 1413660381193	addons.update-checker	WARN	Request for https://versioncheck-bg.addons.mozilla.org/update/VersionCheck.php?reqVersion=2&id=stefanvandamme@stefanvd.net&version=3.0.0.16&maxAppVersion=35.0&status=userEnabled&appID={ec8030f7-c20a-464f-9b0e-13a3a9e97384}&appVersion=33.0&appOS=Linux&appABI=x86_64-gcc3&locale=en-IN&currentAppVersion=33.0&updateType=112&compatMode=normal timed out
+Oct 19, 2014 24:56:21.19 1413660381196	addons.update-checker	WARN	Request for https://versioncheck-bg.addons.mozilla.org/update/VersionCheck.php?reqVersion=2&id=omnibar@ajitk.com&version=0.7.28.20141004&maxAppVersion=35.*&status=userEnabled&appID={ec8030f7-c20a-464f-9b0e-13a3a9e97384}&appVersion=33.0&appOS=Linux&appABI=x86_64-gcc3&locale=en-IN&currentAppVersion=33.0&updateType=112&compatMode=normal timed out
+Oct 19, 2014 24:56:21.20 1413660381199	addons.update-checker	WARN	Request for https://versioncheck-bg.addons.mozilla.org/update/VersionCheck.php?reqVersion=2&id={972ce4c6-7e08-4474-a285-3208198ce6fd}&version=33.0&maxAppVersion=33.0&status=userEnabled&appID={ec8030f7-c20a-464f-9b0e-13a3a9e97384}&appVersion=33.0&appOS=Linux&appABI=x86_64-gcc3&locale=en-IN&currentAppVersion=33.0&updateType=112&compatMode=normal timed out
+Oct 19, 2014 24:56:21.20 1413660381203	addons.update-checker	WARN	Request for https://versioncheck-bg.addons.mozilla.org/update/VersionCheck.php?reqVersion=2&id=langpack-en-GB@firefox.mozilla.org&version=33.0&maxAppVersion=33.*&status=userEnabled&appID={ec8030f7-c20a-464f-9b0e-13a3a9e97384}&appVersion=33.0&appOS=Linux&appABI=x86_64-gcc3&locale=en-IN&currentAppVersion=33.0&updateType=112&compatMode=normal timed out
+Oct 19, 2014 24:56:21.20 1413660381205	addons.update-checker	WARN	Request for https://versioncheck-bg.addons.mozilla.org/update/VersionCheck.php?reqVersion=2&id=langpack-en-ZA@firefox.mozilla.org&version=33.0&maxAppVersion=33.*&status=userEnabled&appID={ec8030f7-c20a-464f-9b0e-13a3a9e97384}&appVersion=33.0&appOS=Linux&appABI=x86_64-gcc3&locale=en-IN&currentAppVersion=33.0&updateType=112&compatMode=normal timed out
+Oct 19, 2014 24:56:21.20 1413660381208	addons.update-checker	WARN	Request for https://versioncheck-bg.addons.mozilla.org/update/VersionCheck.php?reqVersion=2&id={d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}&version=2.6.5&maxAppVersion=36.0&status=userEnabled&appID={ec8030f7-c20a-464f-9b0e-13a3a9e97384}&appVersion=33.0&appOS=Linux&appABI=x86_64-gcc3&locale=en-IN&currentAppVersion=33.0&updateType=112&compatMode=normal timed out
+Oct 19, 2014 24:57:21.21 1413660441214	addons.update-checker	WARN	Request for https://versioncheck-bg.addons.mozilla.org/update/VersionCheck.php?reqVersion=2&id=firefox-hotfix@mozilla.org&version=20140527.01.3&maxAppVersion=%ITEM_MAXAPPVERSION%&status=userEnabled,incompatible&appID={ec8030f7-c20a-464f-9b0e-13a3a9e97384}&appVersion=33.0&appOS=Linux&appABI=x86_64-gcc3&locale=en-IN&currentAppVersion=33.0&updateType=%UPDATE_TYPE%&compatMode=%COMPATIBILITY_MODE% timed out
+Oct 19, 2014 24:58:02.02 1413660482028	addons.xpi	WARN	Exception running bootstrap method shutdown on webapps-team@lists.launchpad.net: ReferenceError: sss is not defined (resource://gre/modules/addons/XPIProvider.jsm -> file:///usr/share/mozilla/extensions/%7Bec8030f7-c20a-464f-9b0e-13a3a9e97384%7D/webapps-team@lists.launchpad.net/bootstrap.js:72:4) JS Stack trace: shutdown@resource://gre/modules/addons/XPIProvider.jsm -> file:///usr/share/mozilla/extensions/%7Bec8030f7-c20a-464f-9b0e-13a3a9e97384%7D/webapps-team@bootstrap.js:72:5 < XPI_callBootstrapMethod@XPIProvider.jsm:4303:9 < shutdownObserver@XPIProvider.jsm:1989:13
+Oct 19, 2014 24:58:02.32 g_dbus_connection_real_closed: Remote peer vanished with error: Underlying GIOStream returned 0 bytes on an async read (g-io-error-quark, 0). Exiting.
+
+Oct 19, 2014 18:13:41.69 NEW SESSION
+Oct 19, 2014 18:13:41.69 
+Oct 19, 2014 18:13:41.70 (process:16001): GLib-CRITICAL **: g_slice_set_config: assertion 'sys_page_size == 0' failed
+Oct 19, 2014 18:23:21.00 
+Oct 19, 2014 18:23:21.00 (process:16316): GLib-CRITICAL **: g_slice_set_config: assertion 'sys_page_size == 0' failed
+Oct 19, 2014 18:33:49.66 
+Oct 19, 2014 18:33:49.66 (process:16594): GLib-CRITICAL **: g_slice_set_config: assertion 'sys_page_size == 0' failed
+Oct 19, 2014 18:38:03.59 
+Oct 19, 2014 18:38:03.59 (process:16775): GLib-CRITICAL **: g_slice_set_config: assertion 'sys_page_size == 0' failed
+Oct 19, 2014 18:40:31.46 
+Oct 19, 2014 18:40:31.46 (process:16901): GLib-CRITICAL **: g_slice_set_config: assertion 'sys_page_size == 0' failed

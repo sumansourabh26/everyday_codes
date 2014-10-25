@@ -1,0 +1,150 @@
+package jdbc1;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Properties;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletInputStream;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import java.io.PrintWriter;
+import java.security.Principal;
+
+ 
+/**
+ * This program demonstrates how to make database connection to PostgreSQL
+ * server using JDBC.
+ *
+ *
+ */
+public class JdbcPostgresqlConnection extends HttpServlet {
+ 
+		Connection conn1 =null;
+		Statement st =null;
+	public void init() throws ServletException {
+	      //Open the connection here
+		
+		String dbURL2 = "jdbc:postgresql://10.105.1.12/cs387";
+        String user = "db120050031";
+        String pass = "qwertypassword";
+
+        try {
+			Class.forName("org.postgresql.Driver");
+		
+			conn1 = DriverManager.getConnection(dbURL2, user, pass);
+			st = conn1.createStatement();
+			System.out.println("init"+conn1);
+        	} catch (Exception e) {
+			// TODO Auto-generated catch block
+        		e.printStackTrace();
+        	}
+	    }
+
+	    public void destroy() {
+	     //Close the connection here
+	    	try{
+	    		conn1.close();
+	    		System.out.println("close");
+	    	}catch(Exception e)
+	    	{
+	    		System.out.println(e);
+	    	}
+	    }
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
+	ServletException, IOException
+	{
+        
+        //Connection conn1 = null;
+        /*String name= request.getParameter("name");
+        String course= request.getParameter("course");*/
+        /*String val = null;
+        if(name == null)
+        	 val=course;
+        else if (course == null)
+       	 val=name;*/
+        //System.out.println(val);
+		String source_form = request.getParameter("identify");
+        String retval = "";
+        String retval1 = "";
+        String retval2 = "";
+        String retval3 = "";
+        String result1= "";
+        try {
+            
+            ResultSet rs = null;
+            if(source_form.equals("getStudent")){
+            	String name = request.getParameter("name");
+            	rs = st.executeQuery("SELECT * from student where name='" + name +"'");
+            }
+            else if(source_form.equals("insertStudent")){
+            	String newname = request.getParameter("newname");
+            	String id = request.getParameter("id");
+            	String dept = request.getParameter("dept");
+            	String temp_tot_credits = request.getParameter("tot_credits");
+            	PreparedStatement pstmt = conn1.prepareStatement("insert into student values (?,?,?,?)"); 
+               	pstmt.setString(1,id);
+               	pstmt.setString(2,newname);
+                pstmt.setString(3,dept);
+                pstmt.setDouble(4,Double.parseDouble(temp_tot_credits));
+                System.out.println(pstmt);
+               	pstmt.executeUpdate();   	
+            }
+            else if(source_form.equals("getCourse")){
+            	String course= request.getParameter("course");
+            	rs = st.executeQuery("SELECT * from course where title='" + course +"'");
+            }
+            else if(source_form.equals("changePre")){
+            	String course1 = request.getParameter("course1");
+            	String prereq = request.getParameter("prereq");
+            	String prereqFinal = request.getParameter("prereqFinal");
+            	PreparedStatement pstmt = conn1.prepareStatement("update prereq set prereq_id = ? where course_id = ? and prereq_id = ? ");
+            	pstmt.setString(1,prereqFinal);
+            	pstmt.setString(2,course1);
+            	pstmt.setString(3,prereq);
+                System.out.println(pstmt);
+               	pstmt.executeUpdate();   
+            }
+            else if(source_form.equals("stat")){
+            	
+            }
+            
+            if (conn1 != null && rs != null) {
+                while(rs.next()) {
+                    retval = rs.getString(1);
+                    retval1 = rs.getString(2);
+                    retval2 = rs.getString(3);
+                    retval3 = rs.getString(4);
+                    result1=retval+"  "+retval1+"  "+retval2+"  "+retval3;
+                }
+                rs.close();
+                if(source_form.equals("getStudent")||source_form.equals("insertStudent"))
+                response.sendRedirect("/Project1/result.jsp?name="+result1);
+                else if(source_form.equals("getCourse")){
+                	response.sendRedirect("/Project1/result1.jsp?name="+result1);
+                }
+
+                
+            }
+ 
+            
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+
+        }
+    }
+}

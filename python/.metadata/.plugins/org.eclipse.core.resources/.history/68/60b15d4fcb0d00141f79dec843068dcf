@@ -1,5 +1,0 @@
-basket = {"apple", "orange", "apple", "pear", "orange", "banana"};
-print(basket)
-
-# print(basket[2]); TypeError: 'set' object does not support indexing
-

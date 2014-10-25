@@ -1,5 +1,0 @@
-
-
-t = 123, 432, "third_element"
-print(t[2]);
-print(t);

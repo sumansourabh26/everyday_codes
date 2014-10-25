@@ -12,6 +12,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/suman/bin/everyday_codes/java/lab12"/>
 			<item value="C:\Users\suman\Dropbox\code\java\findbugs-2.0.3"/>
 			<item value="C:\Users\suman\Dropbox\code\java\fbinsecurestoragedetector"/>
 			<item value="C:\Users\Shobhakant\Dropbox\code\java\cs296_10"/>
