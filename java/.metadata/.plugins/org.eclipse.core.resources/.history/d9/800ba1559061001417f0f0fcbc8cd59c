@@ -1,0 +1,119 @@
+package httpServer;
+
+
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.*;
+
+public class ThreadHandler extends Thread{
+	Socket socketClientSocket;
+	//ServerSocket socketServerSocket;
+	
+	ThreadHandler(Socket socketClientSocket){
+		this.socketClientSocket = socketClientSocket;
+		//this.socketServerSocket = socketServerSocket;
+	}
+/*	public void start() {
+		
+	}*/
+
+	@Override
+	public void run(){
+		
+		try {
+			int count = 0;
+			socketClientSocket.setSoTimeout(40000);
+			BufferedReader inputFromClient = new BufferedReader(new InputStreamReader(socketClientSocket.getInputStream()));
+			DataOutputStream outputToClient = new DataOutputStream(socketClientSocket.getOutputStream());
+			
+			
+			String messegeFromClient = inputFromClient.readLine();
+			System.out.println(messegeFromClient);
+			
+			while(messegeFromClient!=null) {
+				System.out.println("entering while loop");
+			
+				String in = inputFromClient.readLine();
+				while(in!=null && !in.equals("")) {
+					//System.out.printlnln(in);
+					in = inputFromClient.readLine();
+					System.out.println(in);
+					if(in.startsWith("Connection:")) {
+						String[] connectionTimeString = in.split(" ");
+						if(connectionTimeString[1].equals("keep-alive")) {
+							socketClientSocket.setSoTimeout(100000);
+							System.out.println("keep alive found");
+						}
+					}
+				}
+				count++;
+				System.out.println(count);	
+				//System.out.printlnln( messegeFromClient);
+				String[] tokensStrings = messegeFromClient.split(" ");
+				
+				if(tokensStrings[0].equals("GET")) {
+					String requestedFilename = tokensStrings[1];
+					if(requestedFilename.startsWith("/")) {
+						requestedFilename = requestedFilename.substring(1);
+						if(requestedFilename.startsWith("~")) {
+							requestedFilename = "/home/suman/users/"+requestedFilename.substring(1);
+						}
+						else {
+							requestedFilename = "/home/suman/public_html/"+requestedFilename;
+						}
+						System.out.println(requestedFilename);
+					}
+					File filetosend = new File(requestedFilename);
+					int filesize = (int) filetosend.length();
+					FileInputStream fileStream = null;
+					boolean fileFound = true;
+					try {
+						fileStream = new FileInputStream(requestedFilename);					
+					} catch (Exception e) {
+						fileFound = false;
+					}
+					
+					if(fileFound) {
+						byte[] fileinByte =new byte[filesize];
+						fileStream.read(fileinByte);
+						outputToClient.writeBytes("HTTP/1.0 200 Document Follows\r\n");
+						outputToClient.writeBytes("Content-Length: "+filesize+"\r\n\r\n");
+						outputToClient.write(fileinByte, 0, filesize);
+					}
+					else {
+						outputToClient.writeBytes("HTTP/1.0 404 Document NOT FOUND\r\n\r\n");
+						outputToClient.writeBytes("404 document nahi hai be");
+						
+					}
+					outputToClient.flush();
+					socketClientSocket.setKeepAlive(true);
+					socketClientSocket.setSoTimeout(5000);
+				}
+				System.out.println("waiting");
+				messegeFromClient = inputFromClient.readLine();
+				while(messegeFromClient==null) {
+					messegeFromClient = inputFromClient.readLine();
+					System.out.println( messegeFromClient);				
+				//messegeFromClient = null;
+				}
+			}
+			socketClientSocket.close();
+			System.out.println("skgvsdkvgjdklsjvl;");
+		} catch (  SocketTimeoutException e) {
+			try {
+				socketClientSocket.close();
+				System.out.println("socket closed");
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		} catch (IOException ie) {
+			ie.printStackTrace();
+		}
+					
+	}
+}

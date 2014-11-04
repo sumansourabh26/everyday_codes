@@ -1,5 +1,6 @@
 package httpServer;
 
+import java.util.Date;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.File;
@@ -19,9 +20,19 @@ public class Server {
 		while(true) {
 			Socket socketClientSocket = socketServerSocket.accept();
 			countofconnections++;
-			System.out.println(" connection count is now : " + countofconnections+ " ");
+			socketClientSocket.setKeepAlive(true);
 			
-			new ThreadHandler(socketClientSocket).start();
+			//Runnable handler = new TinyHttpdSocketHandler(socket);
+			ThreadHandler threadHandler = new ThreadHandler(socketClientSocket);
+			Thread socketThread = new Thread(threadHandler, "Thread for " + socketClientSocket.toString());
+			
+			//example "Thread for Socket[addr=/127.0.0.1,port=56025,localport=14998]"
+			
+			System.out.println("---------Opening new connection"+socketClientSocket.toString()+"at time "+(new Date()).toString()+"--------------"+
+							" \n------------------------------connection count is now : " + countofconnections+ "--------------------------");
+			socketThread.setDaemon(true);
+			socketThread.start();
+
 			
 		}
 

@@ -28,7 +28,6 @@
 <fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxProfile"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxBinary"/>
 <fullyQualifiedTypeName name="java.lang.StackTraceElement"/>
-<fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="edu.umd.cs.findbugs.bcel.OpcodeStackDetector"/>
 <fullyQualifiedTypeName name="org.omg.CORBA.PRIVATE_MEMBER"/>
 <fullyQualifiedTypeName name="edu.umd.cs.findbugs.BugReporter"/>
@@ -53,11 +52,12 @@
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
 <fullyQualifiedTypeName name="java.net.ServerSocket"/>
-<fullyQualifiedTypeName name="java.lang.Runnable"/>
 <fullyQualifiedTypeName name="java.lang.Error"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.net.SocketTimeoutException"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="java.net.Socket"/>
 <fullyQualifiedTypeName name="httpServer.ThreadHandler"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
-<fullyQualifiedTypeName name="java.io.IOException"/>
-<fullyQualifiedTypeName name="java.net.SocketTimeoutException"/>
 </qualifiedTypeNameHistroy>

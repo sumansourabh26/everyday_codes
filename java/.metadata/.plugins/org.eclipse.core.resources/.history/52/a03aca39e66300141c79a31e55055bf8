@@ -1,0 +1,127 @@
+package httpServer;
+
+
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.Socket;
+import java.net.SocketTimeoutException;
+//import java.util.ArrayList;
+
+public class ThreadHandler implements Runnable{
+	Socket socketClientSocket;
+	//ServerSocket socketServerSocket;
+	
+	ThreadHandler(Socket socketClientSocket){
+		this.socketClientSocket = socketClientSocket;
+		//this.socketServerSocket = socketServerSocket;
+	}
+
+	@Override
+	public void run(){
+		boolean alive = true;
+		try {
+			int count = 0;
+			BufferedReader inputFromClient = new BufferedReader(new InputStreamReader(socketClientSocket.getInputStream()));
+			DataOutputStream outputToClient = new DataOutputStream(socketClientSocket.getOutputStream());
+			
+			
+			String messegeFromClient = inputFromClient.readLine();
+			
+			while(messegeFromClient!=null && !messegeFromClient.equals("")) {
+				
+				String requestString = messegeFromClient;
+				System.out.println(messegeFromClient);
+			
+				//String in = inputFromClient.readLine();
+				
+				while(messegeFromClient!=null && !messegeFromClient.equals("")) {
+					messegeFromClient = inputFromClient.readLine();
+					if(messegeFromClient.startsWith("Connection:")) {
+						String[] connectionTimeString = messegeFromClient.split(" ");
+						if(connectionTimeString[1].equals("keep-alive")) {
+							alive = true;
+						}
+					}
+				}
+				count++;
+				System.out.println("request handled in the same thread"+this.toString() +" is now: "+count);
+				
+				responseSender(requestString, outputToClient); //to 
+				
+				if(alive) {
+					socketClientSocket.setKeepAlive(true);
+					socketClientSocket.setSoTimeout(15000); //same connection will wait for 20 seconds for next request
+				}
+				else {
+					socketClientSocket.close();
+					System.out.println("closing socket");
+					break;
+				}
+				messegeFromClient=inputFromClient.readLine();
+				System.out.println("its ready now "+messegeFromClient);
+
+			}
+			socketClientSocket.close();
+			System.out.println("closing "+socketClientSocket.toString()+" 2");
+			
+		} catch (  SocketTimeoutException e) {
+			try {
+				socketClientSocket.close();
+				System.out.println(socketClientSocket.toString()+"closed due to timeout "  );
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			}
+		} catch (IOException ie) {
+			ie.printStackTrace();
+		}
+					
+	}
+	
+	void responseSender(String requestString, DataOutputStream outputToClient) throws IOException {
+		String[] tokensStrings = requestString.split(" ");
+		if(tokensStrings[0].equals("GET")) {
+			String requestedFilename = tokensStrings[1];
+			if(requestedFilename.startsWith("/")) {
+				requestedFilename = requestedFilename.substring(1);
+				if(requestedFilename.startsWith("~")) {
+					requestedFilename = "/home/suman/users/"+requestedFilename.substring(1);
+				}
+				else {
+					requestedFilename = "/home/suman/public_html/"+requestedFilename;
+				}
+				System.out.println(requestedFilename);
+			}
+			File filetosend = new File(requestedFilename);
+			int filesize = (int) filetosend.length();
+			FileInputStream fileStream = null;
+			boolean fileFound = true;
+			try {
+				fileStream = new FileInputStream(requestedFilename);					
+			} catch (Exception e) {
+				fileFound = false;
+			}
+			
+			if(fileFound) {
+				byte[] fileinByte =new byte[filesize];
+				fileStream.read(fileinByte);
+				outputToClient.writeBytes("HTTP/1.0 200 Document Follows\r\n");
+				outputToClient.writeBytes("Connection: keep-alive\r\n");
+				outputToClient.writeBytes("Content-Length: "+filesize+"\r\n\r\n");
+				outputToClient.write(fileinByte, 0, filesize);
+			}
+			else {
+				outputToClient.writeBytes("HTTP/1.0 404 Document NOT FOUND\r\n\r\n");
+				outputToClient.writeBytes("404 document not found");
+				
+			}
+			outputToClient.flush();
+		}				
+		
+		
+	}
+}

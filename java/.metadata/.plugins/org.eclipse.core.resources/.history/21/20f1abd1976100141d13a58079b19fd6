@@ -1,0 +1,37 @@
+package httpServer;
+
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.*;
+
+public class Server {
+	static int countofconnections = 0;
+
+	public static void main(String[] args) throws IOException {
+		int port = 14998;
+		
+		ServerSocket socketServerSocket = new ServerSocket(port);
+		
+		while(true) {
+			Socket socketClientSocket = socketServerSocket.accept();
+			countofconnections++;
+			
+			
+			//Runnable handler = new TinyHttpdSocketHandler(socket);
+			Thread socketThread = new Thread(new ThreadHandler(socketClientSocket), "Thread for " + socketClientSocket.toString());
+			System.out.println(" connection count is now : " + countofconnections+ " ");
+			socketThread.setDaemon(true);
+			socketThread.start();
+			
+			
+			//new ThreadHandler(socketClientSocket).start();
+			
+		}
+
+	}
+
+}
