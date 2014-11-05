@@ -1,0 +1,17 @@
+package httpServer;
+
+import java.net.Socket;
+import java.util.Queue;
+
+public class QueueHandler implements Runnable{
+	Socket socketClientSocket;
+	Queue<Request> requests;
+	
+	public QueueHandler(Socket socketClientSocket) {
+		this.socketClientSocket = socketClientSocket;
+	}
+	public void run() {
+		
+	}
+	
+}

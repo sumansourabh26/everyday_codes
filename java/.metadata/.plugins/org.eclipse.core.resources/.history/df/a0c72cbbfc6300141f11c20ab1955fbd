@@ -1,0 +1,32 @@
+package httpServer;
+
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.net.Socket;
+import java.util.Queue;
+
+public class QueueHandler implements Runnable{
+	Socket socketClientSocket;
+	BufferedReader inputFromClient;
+	DataOutputStream outputToClient;
+	Queue<Request> requests;
+	
+	public QueueHandler(Socket socketClientSocket,BufferedReader inputFromClient,DataOutputStream outputToClient) {
+		this.socketClientSocket = socketClientSocket;
+		this.inputFromClient = inputFromClient;
+		this.outputToClient = outputToClient;
+	}
+	
+	void addRequestToQueue(Request r) {
+		requests.add(r);
+	}
+	
+	public void run() {
+		
+		while(true) {
+			
+		}
+		
+	}
+	
+}

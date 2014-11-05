@@ -1,0 +1,125 @@
+package httpServer;
+
+import java.util.Date;
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.Socket;
+import java.net.SocketTimeoutException;
+//import java.util.ArrayList;
+
+public class ThreadHandler implements Runnable{
+	Socket socketClientSocket;
+	static int countOfRequest = 0;
+	String IPAddress;
+	//ServerSocket socketServerSocket;
+	
+	ThreadHandler(Socket socketClientSocket,String IPAddress){
+		this.socketClientSocket = socketClientSocket;
+		this.IPAddress = IPAddress;
+		//this.socketServerSocket = socketServerSocket;
+	}
+
+	@Override
+	public void run(){
+		boolean alive = true;
+		
+		try {
+			socketClientSocket.setSoTimeout(20000);
+			BufferedReader inputFromClient = new BufferedReader(new InputStreamReader(socketClientSocket.getInputStream()));
+			DataOutputStream outputToClient = new DataOutputStream(socketClientSocket.getOutputStream());
+			
+			QueueHandler QHandler = new QueueHandler(socketClientSocket,outputToClient);
+			System.out.println("creating new QHandler "+ QHandler.toString());
+			String messegeFromClient = inputFromClient.readLine();
+			
+			
+			
+			while(messegeFromClient!=null && !messegeFromClient.equals("")) {
+				
+				Request r = new Request(messegeFromClient);
+				
+				
+				String requestString = messegeFromClient;
+				//System.out.println(messegeFromClient);
+				
+				while(messegeFromClient!=null && !messegeFromClient.equals("")) {
+					messegeFromClient = inputFromClient.readLine();
+//					if(messegeFromClient.startsWith("Connection:")) {
+//						String[] connectionTimeString = messegeFromClient.split(" ");
+//						if(connectionTimeString[1].equals("keep-alive")) {
+//							r.alive = true;
+//							alive = true;
+//						}
+//						else if (connectionTimeString[1].equals("close")) {
+//							r.alive = false;
+//							alive = false;
+//						}
+//					}
+//					else if(messegeFromClient.startsWith("Accept:")) {
+//						String[] requestTyprString = messegeFromClient.split(" ");
+//						String[] typesPart = requestTyprString[0].split(";");
+//						r.fileType = typesPart[0];
+//					}
+				}
+				
+				if(QHandler.isAlive()) {
+					QHandler.addRequestToQueue(r);
+				}
+				else {
+					QHandler = new QueueHandler(socketClientSocket, outputToClient);
+					System.out.println("creating new QHandler "+ QHandler.toString());
+					QHandler.addRequestToQueue(r);
+					QHandler.run();
+				}
+				
+				countOfRequest++;				
+				
+				if(alive) {
+					socketClientSocket.setKeepAlive(true);
+					socketClientSocket.setSoTimeout(15000); //same connection will wait for 50 seconds for next request
+				}
+				else {
+					while(QHandler.isAlive()) {
+						//don't close the all the connection till all the requests have been served 
+					}
+					socketClientSocket.close();
+					int countValue = Server.connectionCount.get(IPAddress);
+					Server.connectionCount.put(IPAddress, countValue-1);
+					Server.countofconnections--;
+					System.out.println(socketClientSocket.toString()+" of close connection token. Remaning count of connections: "+ Server.countofconnections  );
+					System.out.println("time now is "+(new Date()).toString());
+					break;
+				}
+				messegeFromClient=inputFromClient.readLine();
+				r = new Request(messegeFromClient);
+				//System.out.println("its ready now "+messegeFromClient);
+
+			}
+			socketClientSocket.close();
+			int countValue = Server.connectionCount.get(IPAddress);
+			Server.connectionCount.put(IPAddress, countValue-1);
+			Server.countofconnections--;
+			System.out.println(socketClientSocket.toString()+"outside while loop. Remaning count of connections: "+ Server.countofconnections  );
+			System.out.println("time now is "+(new Date()).toString());
+			
+		} catch (  SocketTimeoutException e) {
+			try {
+				socketClientSocket.close();
+				Server.countofconnections--;
+				System.out.println(socketClientSocket.toString()+"closed due to timeout. Remaning count of connections: "+ Server.countofconnections  );
+				System.out.println("time now is "+(new Date()).toString());
+				
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			}
+		} catch (IOException ie) {
+			ie.printStackTrace();
+		}
+					
+	}
+}

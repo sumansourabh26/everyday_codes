@@ -1,0 +1,11 @@
+package httpServer;
+
+public class Request {
+	String messegeFromClient;
+	String fileType;
+	boolean alive;
+	
+	Request(String messegeFromClient){
+		this.messegeFromClient = messegeFromClient
+	}
+}
